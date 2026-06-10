@@ -4,7 +4,7 @@
 
 Every community creates experiences. The question is whether those experiences are intentional.
 
-Community leadership is not only about running events, managing volunteers, or writing governance documents. It is about designing the conditions that help people feel safe enough to arrive, welcome enough to return, useful enough to contribute, and trusted enough to lead.
+Community leadership is not only about running events, managing volunteers, maintaining projects or writing governance documents. It is about designing the conditions that help people feel safe enough to arrive, welcome enough to return, useful enough to contribute, and trusted enough to lead.
 
 ---
 

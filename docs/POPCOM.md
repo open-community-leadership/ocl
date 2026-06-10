@@ -6,11 +6,11 @@
 
 ## What is POPCOM?
 
-POPCOM is a framework for understanding why open source communities grow, stagnate, or collapse — from the human side.
+POPCOM is a framework for understanding why open source communities grow, stagnate, or collapse from the human side.
 
-Most communities focus on technical infrastructure: the tools, the platforms, the contribution guidelines. POPCOM focuses on the other infrastructure. The invisible one. The one made of people.
+Most communities focus on technical infrastructure: the tools, the platforms, the contribution guidelines. POPCOM focuses on the other infrastructure. The invisible one. The one made of people, by people.
 
-The framework maps six dimensions of community health. When all six are working, communities are self-sustaining. When one breaks down, people start quietly leaving — often before anyone notices.
+The framework maps six dimensions of community health. When all six are working, communities are self-sustaining. When one breaks down, people start quietly leaving. And often before anyone notices.
 
 ---
 
@@ -37,12 +37,12 @@ Participation is more than showing up. It is the moment someone moves from obser
 ### O — Ownership
 *How people gain responsibility.*
 
-Communities stay alive when responsibility is distributed. Ownership is the process by which a participant becomes a steward — someone who feels the community is theirs to protect and grow.
+Communities stay alive when responsibility is distributed. Ownership is the process by which a participant becomes a steward and someone who feels the community is theirs to protect and grow.
 
 Without ownership transfer, communities become dependent on a single person or small group. When those people burn out or leave, the community collapses.
 
 **Questions to ask:**
-- Who owns what in your community — and do they know it?
+- Who owns what in your community? And do they know it?
 - How does someone move from participant to owner of something?
 - Is ownership offered, or does someone have to ask for it?
 - What happens to ownership when a leader leaves?
@@ -57,9 +57,9 @@ Without ownership transfer, communities become dependent on a single person or s
 ### P — Purpose
 *Why people stay.*
 
-People do not stay in communities because of tools or platforms. They stay because something about being there matters to them. Purpose is the shared why that keeps people coming back even when it is inconvenient.
+People do not stay in communities because of tools or platforms. They stay because something about being there matters to them. Purpose is the shared 'why' that keeps people coming back even when it is inconvenient.
 
-Purpose is not a mission statement. It is felt. It is whether someone would describe your community to a friend with energy or obligation.
+Purpose is not a mission statement. It is felt. It is whether someone would describe your community to a friend with enthusiasm or obligation.
 
 **Questions to ask:**
 - Can your members articulate why your community exists?
@@ -77,12 +77,12 @@ Purpose is not a mission statement. It is felt. It is whether someone would desc
 ### C — Connection
 *How relationships form.*
 
-Connection is what separates a community from an audience. An audience consumes. A community relates. Connection is the formation of real relationships — between members, not just between members and the leader.
+Connection is what separates a community from an audience. An audience consumes. A community relates. Connection is the formation of real relationships between members, not just between members and the leader.
 
 Communities with strong connection are resilient. When something goes wrong, people hold each other. Communities without it dissolve the moment the organiser steps back.
 
 **Questions to ask:**
-- Do members know each other — not just the organiser?
+- Do members know each other and not just the organiser?
 - Are there spaces and moments designed for relationship-building, not just content delivery?
 - Do people in your community help each other outside of official events?
 - Would your community continue if you were not there?
@@ -97,7 +97,7 @@ Communities with strong connection are resilient. When something goes wrong, peo
 ### O — Opportunity
 *How contributors grow.*
 
-People need to grow. When a community offers no path forward — no new challenges, no new responsibilities, no new experiences — people move on. Not because they have left, but because they have outgrown.
+People need to grow. When a community offers no path forward: no new challenges, no new responsibilities, no new experiences, then people move on. Not because they have left, but because they have outgrown.
 
 Opportunity is about creating pathways: from attendee to speaker, from volunteer to co-organiser, from participant to leader. Communities that do this well become pipelines for the broader ecosystem.
 
