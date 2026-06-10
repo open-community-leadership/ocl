@@ -117,9 +117,9 @@ Opportunity is about creating pathways: from attendee to speaker, from volunteer
 ### M — Mentorship
 *How communities reproduce themselves.*
 
-Mentorship is how communities survive beyond their founders. It is the transmission of knowledge, values, and practice from experienced members to newer ones — not through documentation alone, but through relationship.
+Mentorship is how communities survive beyond their founders. It is the transmission of knowledge, values, and practice from experienced members to newer ones. It is not through documentation alone, but through relationship.
 
-This is the dimension that open source communities most consistently neglect. And it is why so many communities die with their founders.
+This is the dimension that open source communities most consistently neglect. And it is why so many communities fall apart with their founders.
 
 **Questions to ask:**
 - Who is teaching the next generation of leaders in your community?
