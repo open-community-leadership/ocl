@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Experience Is Everything — Open Source Workshop Package</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0d;
+    --white: #faf7f2;
+    --green: #2d6a4f;
+    --green-light: #b7e4c7;
+    --red: #c1121f;
+    --red-light: #ffd6d6;
+    --yellow: #e9c46a;
+    --yellow-light: #fff3cd;
+    --ink: #1a1a2e;
+    --paper: #faf7f2;
+    --mid: #6b6b6b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* PRINT */
+  @media print {
+    .no-print { display: none !important; }
+    .page-break { page-break-after: always; }
+    body { background: white; font-size: 13px; }
+    .cover { background: var(--black) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .zone-card, .sticky-block, .activity-box, .tip-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--black); color: var(--white);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 32px;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+  .nav-links a:hover { text-decoration: underline; }
+  .nav-print {
+    background: var(--yellow); color: var(--black);
+    border: none; padding: 8px 18px; font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; cursor: pointer;
+  }
+  .nav-print:hover { background: white; }
+
+  /* SECTIONS */
+  .section {
+    max-width: 860px; margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .section + .section { padding-top: 0; }
+
+  /* COVER */
+  .cover {
+    background: var(--black);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    padding: 80px;
+    position: relative; overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(233, 196, 106, 0.15);
+  }
+  .cover::after {
+    content: '';
+    position: absolute; bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(233, 196, 106, 0.08);
+  }
+  .cover-eyebrow {
+    font-family: 'DM Mono', monospace;
+    color: var(--yellow); font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .cover-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(48px, 8vw, 88px);
+    font-weight: 800; line-height: 0.95;
+    color: var(--white);
+    max-width: 700px;
+    margin-bottom: 24px;
+  }
+  .cover-title span { color: var(--yellow); }
+  .cover-sub {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: rgba(250,247,242,0.6);
+    font-size: 18px;
+    max-width: 480px;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .cover-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.1em;
+    color: rgba(250,247,242,0.4);
+    text-transform: uppercase;
+    border-top: 1px solid rgba(250,247,242,0.1);
+    padding-top: 24px; width: 100%;
+    max-width: 600px;
+    display: flex; gap: 32px;
+  }
+  .cover-badge {
+    background: var(--yellow); color: var(--black);
+    font-family: 'Syne', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 6px 14px; display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none; border-top: 1px solid rgba(26,26,46,0.12);
+    margin: 0;
+  }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--mid);
+    margin-bottom: 16px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    background: var(--black); color: var(--white);
+    padding: 64px 80px;
+  }
+  .part-header .part-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em;
+    color: var(--yellow); text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .part-header h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 42px; font-weight: 800;
+    line-height: 1.1; margin-bottom: 20px;
+  }
+  .part-header p {
+    color: rgba(250,247,242,0.65);
+    font-style: italic; font-size: 16px;
+    max-width: 520px; line-height: 1.7;
+  }
+
+  /* TYPOGRAPHY */
+  h1 { font-family: 'Syne', sans-serif; font-weight: 800; }
+  h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 28px; margin-bottom: 20px; line-height: 1.2; }
+  h3 { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 12px; color: var(--green); }
+  h4 { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.05em; margin-bottom: 8px; }
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  em { font-style: italic; color: var(--mid); }
+
+  .big-quote {
+    font-family: 'Lora', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+    border-left: 4px solid var(--yellow);
+    padding: 24px 32px;
+    background: var(--yellow-light);
+    margin: 32px 0;
+  }
+
+  .pullquote {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 700;
+    line-height: 1.3;
+    color: var(--green);
+    margin: 32px 0;
+    padding-left: 24px;
+    border-left: 3px solid var(--green);
+  }
+
+  /* STICKY COLORS */
+  .sticky-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    margin: 24px 0;
+  }
+  .sticky-block {
+    padding: 14px 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 10px;
+    flex: 1; min-width: 180px;
+  }
+  .sticky-block.green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .sticky-block.red { background: var(--red-light); border-left: 4px solid var(--red); }
+  .sticky-block.yellow { background: var(--yellow-light); border-left: 4px solid var(--yellow); }
+  .sticky-dot {
+    width: 14px; height: 14px; border-radius: 2px; flex-shrink: 0;
+  }
+  .sticky-dot.green { background: var(--green); }
+  .sticky-dot.red { background: var(--red); }
+  .sticky-dot.yellow { background: #c9a227; }
+
+  /* ACTIVITY BOXES */
+  .activity-box {
+    border: 2px solid var(--black);
+    margin: 32px 0;
+    position: relative;
+  }
+  .activity-header {
+    background: var(--black); color: var(--white);
+    padding: 14px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .activity-header h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: white; margin: 0;
+  }
+  .activity-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--yellow);
+    letter-spacing: 0.1em;
+  }
+  .activity-body { padding: 24px; }
+  .activity-prompt {
+    background: var(--yellow-light);
+    border: 1px dashed #c9a227;
+    padding: 16px 20px;
+    font-style: italic;
+    font-size: 15px;
+    margin: 16px 0;
+    line-height: 1.6;
+  }
+  .activity-steps {
+    counter-reset: step;
+    list-style: none;
+    margin: 16px 0;
+  }
+  .activity-steps li {
+    counter-increment: step;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .activity-steps li::before {
+    content: counter(step);
+    position: absolute; left: 0;
+    width: 26px; height: 26px;
+    background: var(--black); color: var(--yellow);
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 12px; display: flex;
+    align-items: center; justify-content: center;
+    top: 0;
+  }
+
+  /* EXPERIENCE MAP ZONES */
+  .zone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border: 2px solid var(--black);
+    margin: 32px 0;
+  }
+  .zone-card {
+    padding: 28px 24px;
+    min-height: 200px;
+    position: relative;
+  }
+  .zone-card:nth-child(1) { background: #e8f5e9; border-right: 2px solid var(--black); border-bottom: 2px solid var(--black); }
+  .zone-card:nth-child(2) { background: #fff8e1; border-bottom: 2px solid var(--black); }
+  .zone-card:nth-child(3) { background: #e3f2fd; border-right: 2px solid var(--black); }
+  .zone-card:nth-child(4) { background: #fce4ec; }
+  .zone-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .zone-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 800;
+    margin-bottom: 10px; line-height: 1.1;
+  }
+  .zone-question {
+    font-style: italic; font-size: 13px;
+    color: var(--mid); line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .zone-write-space {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 24px; margin-bottom: 8px;
+  }
+
+  /* TIP BOX */
+  .tip-box {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+  .tip-box strong {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--green);
+    display: block; margin-bottom: 6px;
+  }
+
+  .warning-box {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    padding: 20px 24px; margin: 24px 0; font-size: 14px;
+  }
+  .warning-box strong {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--red);
+    display: block; margin-bottom: 6px;
+  }
+
+  /* TIMING TABLE */
+  .timing-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+  .timing-table th {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--black); color: var(--yellow);
+    padding: 10px 16px; text-align: left;
+  }
+  .timing-table td { padding: 10px 16px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .timing-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+  .timing-table tr.total td { font-family: 'Syne', sans-serif; font-weight: 700; background: var(--yellow-light); }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; margin: 16px 0; }
+  .checklist li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    font-size: 14px;
+  }
+  .checklist li::before {
+    content: '□';
+    position: absolute; left: 0;
+    font-size: 16px; color: var(--mid);
+    font-family: monospace;
+  }
+
+  /* WORKSHEET */
+  .worksheet-page {
+    border: 2px solid var(--black);
+    padding: 40px;
+    margin: 32px 0;
+    position: relative;
+  }
+  .worksheet-page::before {
+    content: attr(data-label);
+    position: absolute; top: -14px; left: 24px;
+    background: var(--white); padding: 0 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--mid);
+  }
+  .write-lines { margin: 16px 0; }
+  .write-line {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    height: 32px; margin-bottom: 4px;
+  }
+  .write-line.tall { height: 60px; }
+
+  /* LICENSE / OPEN SOURCE FOOTER */
+  .os-footer {
+    background: var(--black); color: rgba(250,247,242,0.7);
+    padding: 48px 80px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; line-height: 1.8;
+  }
+  .os-footer h3 {
+    color: var(--yellow); font-family: 'Syne', sans-serif;
+    font-size: 16px; margin-bottom: 16px; font-weight: 700;
+  }
+  .os-footer a { color: var(--yellow); }
+  .license-badge {
+    display: inline-block;
+    border: 1px solid rgba(233,196,106,0.4);
+    padding: 6px 14px; margin-top: 16px;
+    font-size: 11px; letter-spacing: 0.1em;
+    color: var(--yellow);
+  }
+
+  /* COLUMNS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin: 24px 0; }
+
+  /* MATERIALS GRID */
+  .materials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+  .material-item {
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 20px 16px; text-align: center;
+  }
+  .material-icon { font-size: 28px; margin-bottom: 8px; }
+  .material-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.05em; margin-bottom: 4px;
+  }
+  .material-detail { font-size: 11px; color: var(--mid); font-family: 'DM Mono', monospace; }
+
+  /* FACILITATOR NOTES */
+  .facilitator-note {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 16px 20px; margin: 16px 0;
+    font-size: 13px;
+    position: relative;
+  }
+  .facilitator-note::before {
+    content: 'Facilitator note';
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--mid);
+    display: block; margin-bottom: 6px;
+  }
+
+  /* SCROLL PROGRESS */
+  .progress-bar {
+    position: fixed; top: 48px; left: 0; right: 0;
+    height: 3px; background: rgba(255,255,255,0.1); z-index: 99;
+  }
+  .progress-fill {
+    height: 100%; background: var(--yellow);
+    width: 0%; transition: width 0.1s;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav no-print">
+  <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:0.05em;">The Experience Is Everything</div>
+  <div class="nav-links">
+    <a href="#workshop">Workshop</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#facilitator">Facilitator Guide</a>
+    <a href="#zine">Zine</a>
+  </div>
+  <button class="nav-print" onclick="window.print()">Print Package</button>
+</nav>
+<div class="progress-bar no-print"><div class="progress-fill" id="progress"></div></div>
+
+<!-- COVER -->
+<div class="cover" id="top">
+  <div style="position:relative;z-index:1;width:100%;">
+    <div class="cover-eyebrow">Open Source Community Leadership Workshop</div>
+    <div class="cover-badge">Free to use · Free to share · Free to teach</div>
+    <div class="cover-title">The<br>Experience<br>Is <span>Everything.</span></div>
+    <div class="cover-sub">A 1.5-hour workshop on what makes people stay in communities — and what makes them leave.</div>
+    <div class="cover-meta">
+      <span>Version 1.0</span>
+      <span>CC BY 4.0 License</span>
+      <span>For 20–50 participants</span>
+      <span>Conference format</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S IN THIS PACKAGE -->
+<div class="section" id="workshop">
+  <div class="section-label">What's in this package</div>
+  <h2>Everything you need to run, attend, or share this workshop.</h2>
+  <p>This package has three parts. Use them together or separately. Pass them on freely.</p>
+
+  <div class="three-col">
+    <div style="border:2px solid var(--black);padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;">Part 01</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:10px;line-height:1.1;">Workshop<br>Run Sheet</div>
+      <p style="font-size:13px;color:var(--mid);">The full 90-minute session plan with timings, activities, and facilitator guidance.</p>
+    </div>
+    <div style="border:2px solid var(--black);padding:24px;background:var(--yellow-light);">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;">Part 02</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:10px;line-height:1.1;">Participant<br>Toolkit</div>
+      <p style="font-size:13px;color:var(--mid);">Printable worksheets: the Experience Map, individual reflection sheet, and take-home card.</p>
+    </div>
+    <div style="border:2px solid var(--black);padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;">Part 03</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:10px;line-height:1.1;">Facilitator<br>Guide</div>
+      <p style="font-size:13px;color:var(--mid);">How to teach this workshop yourself — including what to say, what to watch for, and how to adapt it.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- THE ARGUMENT -->
+<div class="section">
+  <div class="section-label">The idea behind this workshop</div>
+  <h2>Nobody teaches this. That's the point.</h2>
+
+  <p>Managing people in an open source community is its own discipline. It isn't taught in schools. It isn't covered in company onboarding. There's no LinkedIn Learning course for "how to make a volunteer feel like their first contribution mattered."</p>
+
+  <p>That knowledge lives in people. Specifically, in the people who've done it — who got it wrong in front of everyone and kept going anyway.</p>
+
+  <div class="big-quote">"The experience is what makes people stay in communities. And it's also what makes them leave."</div>
+
+  <p>Not the tools. Not the platform. Not whether you used Meetup or Lu.ma. The human experience of being inside your community — whether someone felt seen, useful, welcomed — that is the only thing that determines whether they come back.</p>
+
+  <p>Open source communities are, accidentally, one of the best free leadership schools in the world. No tuition. No gatekeeping. Just people learning from people, in public, by doing. This workshop is about making that visible — and intentional.</p>
+</div>
+
+<hr class="divider">
+
+<!-- PART 1: WORKSHOP RUN SHEET -->
+<div class="part-header page-break">
+  <div class="part-num">Part 01</div>
+  <h2>Workshop Run Sheet</h2>
+  <p>The complete 90-minute session plan. Read before facilitating. Share with co-facilitators.</p>
+</div>
+
+<div class="section">
+  <div class="section-label">Before you begin</div>
+  <h2>Setup & Materials</h2>
+
+  <div class="materials-grid">
+    <div class="material-item">
+      <div class="material-icon">🪑</div>
+      <div class="material-name">Room layout</div>
+      <div class="material-detail">Clusters of 4–6, not rows</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🟩</div>
+      <div class="material-name">Green stickies</div>
+      <div class="material-detail">1 pad per table</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🟥</div>
+      <div class="material-name">Red stickies</div>
+      <div class="material-detail">1 pad per table</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🟨</div>
+      <div class="material-name">Yellow stickies</div>
+      <div class="material-detail">1 pad per table</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🖊️</div>
+      <div class="material-name">Markers</div>
+      <div class="material-detail">2–3 per table</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🗺️</div>
+      <div class="material-name">Experience Maps</div>
+      <div class="material-detail">1 large per table (A3+)</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">📋</div>
+      <div class="material-name">Worksheets</div>
+      <div class="material-detail">1 per participant</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">📌</div>
+      <div class="material-name">Wall space</div>
+      <div class="material-detail">Per table for gallery walk</div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🃏</div>
+      <div class="material-name">Take-home cards</div>
+      <div class="material-detail">1 per participant</div>
+    </div>
+  </div>
+
+  <div class="sticky-legend">
+    <div class="sticky-block green"><div class="sticky-dot green"></div><strong>GREEN</strong> = creates belonging / makes people stay</div>
+    <div class="sticky-block red"><div class="sticky-dot red"></div><strong>RED</strong> = creates distance / makes people leave</div>
+    <div class="sticky-block yellow"><div class="sticky-dot yellow"></div><strong>YELLOW</strong> = a question your community hasn't answered yet</div>
+  </div>
+
+  <div class="tip-box">
+    <strong>Tell participants the color system at the start.</strong>
+    These same three colors run through every activity. By the end of the session the room is covered in them. That's intentional — the visual is part of the experience.
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Timing overview</div>
+
+  <table class="timing-table">
+    <thead>
+      <tr><th>Segment</th><th>Format</th><th>Time</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Opening + mini-talk</td><td>Facilitator-led</td><td>15 min</td></tr>
+      <tr><td>Activity 1: The Moment</td><td>Table brainstorm</td><td>10 min</td></tr>
+      <tr><td>Experience Map intro</td><td>Facilitator-led</td><td>10 min</td></tr>
+      <tr><td>Activity 2: Map Your Community</td><td>Individual then table</td><td>15 min</td></tr>
+      <tr><td>Gallery Walk</td><td>Room-wide movement</td><td>15 min</td></tr>
+      <tr><td>Gallery Debrief</td><td>Full room</td><td>5 min</td></tr>
+      <tr><td>Mini-talk: You Are the Experience</td><td>Facilitator-led</td><td>8 min</td></tr>
+      <tr><td>Activity 3: One Thing</td><td>Table then full room</td><td>7 min</td></tr>
+      <tr><td>Closing Wall</td><td>Full room</td><td>5 min</td></tr>
+      <tr class="total"><td>Total</td><td></td><td>90 min</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <h3>PART 1 — Understand (25 min)</h3>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Opening</h4>
+      <span class="activity-time">5 min · Facilitator-led</span>
+    </div>
+    <div class="activity-body">
+      <p>No slides. No introduction yet. Open with this — and mean it:</p>
+      <div class="activity-prompt">"Think of a community you left. Not because life got busy. Because something felt off. Hold that."</div>
+      <p>Pause. Five full seconds. Then:</p>
+      <div class="activity-prompt">"Now think of a community you stayed in way longer than made any practical sense. What was different?"</div>
+      <p>Don't collect answers. Let people sit with both. <em>Then</em> introduce yourself — one minute, one real story, no CV recitation.</p>
+      <div class="facilitator-note">The silence is load-bearing. Don't fill it. The best thing you can do in those five seconds is look calm and wait. People need a moment to actually remember something real.</div>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Mini-talk: The Double-Edged Truth</h4>
+      <span class="activity-time">10 min · Facilitator-led</span>
+    </div>
+    <div class="activity-body">
+      <p>Conversational. No more than 4 slides if you use any. The core argument in plain language:</p>
+      <ul class="activity-steps">
+        <li>Nobody teaches community leadership. Not schools, not companies. The knowledge lives in people who've done it.</li>
+        <li>Open source communities are accidentally one of the best free leadership schools in the world — because you can only learn it by being inside one, with other humans.</li>
+        <li>That's also why it's powerful as a draw. The learning <em>requires</em> the belonging.</li>
+        <li>And then the line that anchors everything: <strong>the experience is what makes people stay. And it's also what makes them leave.</strong></li>
+      </ul>
+      <div class="facilitator-note">This should feel like a conversation, not a keynote. If you find yourself reading slides, stop. Put them away.</div>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Activity 1: The Moment</h4>
+      <span class="activity-time">10 min · Table brainstorm</span>
+    </div>
+    <div class="activity-body">
+      <div class="activity-prompt">"As a table: brainstorm moments that make someone feel like they belong in a community — and moments that make them quietly decide not to come back."</div>
+      <ul class="activity-steps">
+        <li>Green stickies for belonging moments. Red stickies for leaving moments.</li>
+        <li>Stick them on the table in two columns.</li>
+        <li>Aim for quantity — 10+ per color per table. Fast and instinctive, not precious.</li>
+        <li>No sharing with the room yet. Just generating.</li>
+      </ul>
+      <div class="tip-box" style="margin-top:16px;">
+        <strong>Why this works</strong>
+        People know more than they think they do. This activity surfaces the tacit knowledge that's already in the room before anyone has named a framework. You'll see the same stickies across every table — and that repetition is part of the point.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <h3>PART 2 — Design (45 min)</h3>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>The Experience Map: Framework Intro</h4>
+      <span class="activity-time">10 min · Facilitator-led</span>
+    </div>
+    <div class="activity-body">
+      <p>Introduce the four zones. Each table has a large printed map with these zones marked.</p>
+
+      <div class="zone-grid" style="margin:20px 0;">
+        <div class="zone-card">
+          <div class="zone-num">Zone 01</div>
+          <div class="zone-title">First Contact</div>
+          <div class="zone-question">How did they find out you exist?</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-num">Zone 02</div>
+          <div class="zone-title">First Step</div>
+          <div class="zone-question">What was the first thing they did — and how did it feel?</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-num">Zone 03</div>
+          <div class="zone-title">First Belonging</div>
+          <div class="zone-question">When did they first feel <em>in</em>, not just attending?</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-num">Zone 04</div>
+          <div class="zone-title">First Contribution</div>
+          <div class="zone-question">When did they first give something back — and how was it received?</div>
+        </div>
+      </div>
+
+      <div class="pullquote">Most communities design zones 1 and 2 accidentally and barely think about 3 and 4.</div>
+      <p>The drop-off almost always happens in the gap between <strong>First Step</strong> and <strong>First Belonging</strong>. That's where people quietly decide whether to return. And almost nobody is designing for it.</p>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Activity 2: Map Your Community</h4>
+      <span class="activity-time">15 min · Individual then table</span>
+    </div>
+    <div class="activity-body">
+      <ul class="activity-steps">
+        <li><strong>3 minutes alone first.</strong> Individual worksheets. Each person maps their own community against the four zones. This is private thinking time — protect it. No partner talking, no group pressure.</li>
+        <li><strong>Table work (12 min).</strong> Place stickies from Activity 1 onto the zones where they belong. Add new ones as they come up. Yellow stickies for anything your community hasn't figured out yet.</li>
+        <li>By the end, each table has a full color-coded Experience Map of a real community — or a composite of several.</li>
+      </ul>
+      <div class="warning-box">
+        <strong>Don't skip the individual time.</strong>
+        If tables go straight to group mode, the loudest voice dominates and the honest self-reflection never happens. Three minutes of private thinking produces better group conversation.
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Gallery Walk</h4>
+      <span class="activity-time">15 min · Room-wide movement</span>
+    </div>
+    <div class="activity-body">
+      <ul class="activity-steps">
+        <li>Each table posts their map on the wall or flipchart behind them.</li>
+        <li>Everyone gets up and walks the room. 2–3 minutes per table.</li>
+        <li>Participants can add a sticky to another table's map: green if they recognize something that works in their community too, red if they've seen that problem, yellow if it raises a question.</li>
+        <li>No facilitation during this. Movement and reading and adding. That's it.</li>
+      </ul>
+      <div class="facilitator-note">Your job during the gallery walk is to stay out of the way. Resist the urge to explain tables' maps to visitors. Walk around, look interested, say nothing unless someone directly asks you something.</div>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Gallery Debrief</h4>
+      <span class="activity-time">5 min · Full room</span>
+    </div>
+    <div class="activity-body">
+      <p>Bring everyone back. Ask three people to share one thing they noticed on <em>someone else's</em> map — something that surprised them, or stuck with them.</p>
+      <p>Don't over-facilitate. Three shares, then move on. The patterns will be obvious — let the room name them, not you.</p>
+      <div class="facilitator-note">If energy dips here, it's usually because the gallery walk ran long. Keep the debrief tight. The point isn't to process everything — it's to name the patterns and move.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <h3>PART 3 — Reflect (20 min)</h3>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Mini-talk: You Are Part of the Experience</h4>
+      <span class="activity-time">8 min · Facilitator-led</span>
+    </div>
+    <div class="activity-body">
+      <p>This is the part most facilitators skip. Don't.</p>
+      <p>The experience of a community is shaped by many things. But more than anyone else, it's shaped by the people leading it. Whether you remember names. Whether you make space for new people or keep gravitating to the same five. Whether someone's first contribution is celebrated or quietly ignored.</p>
+      <div class="big-quote" style="margin:20px 0;">"You are not neutral. You are the experience for a lot of people. Especially the new ones."</div>
+      <p>And this is why burnout is a community problem, not just a personal one. When the leader is running on empty, people feel it before you say a word.</p>
+      <p>Close with: <em>"None of this requires money or a bigger team. It requires attention. And you already know how to pay attention. That's why you're here."</em></p>
+      <div class="facilitator-note">This talk needs to land personally. Share something real — a moment you got it wrong as a leader. Not a polished failure story. An honest one. The room will feel the difference.</div>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Activity 3: One Thing</h4>
+      <span class="activity-time">7 min · Table then full room</span>
+    </div>
+    <div class="activity-body">
+      <div class="activity-prompt">"What is one change — small enough to do next week — that would improve the experience in your community?"</div>
+      <ul class="activity-steps">
+        <li>Each person writes one idea on a green sticky.</li>
+        <li>Place them in the center of the table.</li>
+        <li>Table picks their single strongest one and writes it large on a fresh sticky.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <h4>Closing Wall</h4>
+      <span class="activity-time">5 min · Full room</span>
+    </div>
+    <div class="activity-body">
+      <p>Every table's "one thing" goes on a shared wall at the front. Facilitator reads them out as they go up. No commentary — just naming them.</p>
+      <p>Close with:</p>
+      <div class="activity-prompt">"The experience is everything. You already knew that. Now you have words for it — and a wall full of proof that you're not alone in figuring it out."</div>
+      <div class="tip-box">
+        <strong>Leave the wall up.</strong>
+        Don't take it down after the workshop. Leave it up for the rest of the conference. People photograph it. It travels further than the session itself.
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART 2: PARTICIPANT TOOLKIT -->
+<div class="part-header page-break" id="toolkit">
+  <div class="part-num">Part 02</div>
+  <h2>Participant Toolkit</h2>
+  <p>Print one set per participant. These are theirs to keep and use in their own communities.</p>
+</div>
+
+<div class="section">
+  <div class="section-label">Printable worksheet 1 of 3</div>
+  <h2>The Experience Map</h2>
+  <p>Print at A3 or larger. One per table for group activity. Also works as a solo reflection tool.</p>
+
+  <div class="worksheet-page" data-label="Table Experience Map — The Experience Is Everything Workshop">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:4px;">Our Community Experience Map</div>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--mid);letter-spacing:0.1em;">Community name: _________________________ &nbsp;&nbsp; Date: _____________</div>
+      </div>
+      <div class="sticky-legend" style="flex-direction:column;gap:8px;margin:0;">
+        <div class="sticky-block green" style="font-size:11px;padding:8px 12px;min-width:0;"><div class="sticky-dot green"></div>Green = stays</div>
+        <div class="sticky-block red" style="font-size:11px;padding:8px 12px;min-width:0;"><div class="sticky-dot red"></div>Red = leaves</div>
+        <div class="sticky-block yellow" style="font-size:11px;padding:8px 12px;min-width:0;"><div class="sticky-dot yellow"></div>Yellow = open question</div>
+      </div>
+    </div>
+
+    <div class="zone-grid">
+      <div class="zone-card">
+        <div class="zone-num">Zone 01</div>
+        <div class="zone-title">First Contact</div>
+        <div class="zone-question">How did they find out you exist? What was their first impression?</div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:12px;">← place stickies here</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-num">Zone 02</div>
+        <div class="zone-title">First Step</div>
+        <div class="zone-question">What was the first action they took? How easy was it? How did it feel?</div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:12px;">← place stickies here</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-num">Zone 03</div>
+        <div class="zone-title">First Belonging</div>
+        <div class="zone-question">When did they first feel <em>in</em>, not just attending? Was it designed or accidental?</div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:12px;">← place stickies here</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-num">Zone 04</div>
+        <div class="zone-title">First Contribution</div>
+        <div class="zone-question">When did they first give something back — and how was it received?</div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div class="zone-write-space"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:12px;">← place stickies here</div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:16px;background:#f5f5f5;font-size:13px;">
+      <strong style="font-family:'Syne',sans-serif;font-size:12px;letter-spacing:0.05em;">After mapping: Where is the gap?</strong>
+      <div class="zone-write-space" style="margin-top:12px;"></div>
+      <div class="zone-write-space"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Printable worksheet 2 of 3</div>
+  <h2>Individual Reflection Sheet</h2>
+  <p>One per participant. Used during Activity 2 — the private thinking time before group work.</p>
+
+  <div class="worksheet-page" data-label="Individual Reflection — The Experience Is Everything Workshop">
+    <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:4px;">My Community's Experience</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--mid);margin-bottom:28px;letter-spacing:0.08em;">Your community: _________________________ &nbsp;&nbsp; Your role: _________________________</div>
+
+    <h4 style="margin-bottom:8px;">Zone 1 — First Contact</h4>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:8px;">How do people actually find your community? Is this designed, or does it just happen?</p>
+    <div class="write-lines">
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <h4 style="margin-top:20px;margin-bottom:8px;">Zone 2 — First Step</h4>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:8px;">What's the first thing a new person does? What's the best case experience? What's the worst case?</p>
+    <div class="write-lines">
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <h4 style="margin-top:20px;margin-bottom:8px;">Zone 3 — First Belonging</h4>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:8px;">Can you name a specific moment where someone went from attending to belonging? Who made that happen?</p>
+    <div class="write-lines">
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <h4 style="margin-top:20px;margin-bottom:8px;">Zone 4 — First Contribution</h4>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:8px;">What happens when someone contributes for the first time? Is their contribution acknowledged? By whom?</p>
+    <div class="write-lines">
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="margin-top:28px;border-top:2px solid var(--black);padding-top:20px;">
+      <h4 style="color:var(--red);margin-bottom:8px;">The honest question</h4>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:8px;">Which zone is weakest in your community right now? Where are you losing people?</p>
+      <div class="write-lines">
+        <div class="write-line tall"></div>
+        <div class="write-line tall"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;background:var(--green-light);padding:16px 20px;">
+      <h4 style="color:var(--green);margin-bottom:8px;">One thing I can do next week</h4>
+      <div class="write-lines">
+        <div class="write-line tall"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;" id="zine">
+  <div class="section-label">Printable take-home card (print double-sided, fold once)</div>
+  <h2>The Take-Home Card</h2>
+  <p>Print double-sided, fold in half. Participants keep this. It's a reminder of the framework and a prompt to pass it on.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--black);margin:24px 0;">
+
+    <!-- FRONT -->
+    <div style="background:var(--black);color:var(--white);padding:40px 32px;min-height:340px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:20px;">Open Source Workshop</div>
+      <div style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;line-height:1;margin-bottom:16px;">The Experience<br>Is <span style="color:var(--yellow);">Everything.</span></div>
+      <div style="font-family:'Lora',serif;font-style:italic;font-size:14px;color:rgba(250,247,242,0.65);line-height:1.6;margin-bottom:24px;">What makes people stay in communities — and what makes them leave.</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(250,247,242,0.3);letter-spacing:0.1em;text-transform:uppercase;border-top:1px solid rgba(250,247,242,0.1);padding-top:16px;">CC BY 4.0 · Free to share and adapt</div>
+    </div>
+
+    <!-- BACK -->
+    <div style="background:var(--white);padding:40px 32px;border-left:2px solid var(--black);">
+      <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;">The Four Zones</div>
+
+      <div style="margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;">01</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">First Contact</div>
+        <div style="font-size:12px;color:var(--mid);">How did they find you?</div>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;">02</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">First Step</div>
+        <div style="font-size:12px;color:var(--mid);">What was the first thing they did?</div>
+      </div>
+      <div style="margin-bottom:14px;padding:10px;background:var(--yellow-light);border-left:3px solid var(--yellow);">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;">03 ← the gap</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">First Belonging</div>
+        <div style="font-size:12px;color:var(--mid);">When did they feel <em>in</em>?</div>
+      </div>
+      <div style="margin-bottom:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;">04</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">First Contribution</div>
+        <div style="font-size:12px;color:var(--mid);">How was their first contribution received?</div>
+      </div>
+
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);border-top:1px solid rgba(0,0,0,0.1);padding-top:12px;line-height:1.8;">
+        🟩 Belonging &nbsp; 🟥 Leaving &nbsp; 🟨 Open question
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART 3: FACILITATOR GUIDE -->
+<div class="part-header page-break" id="facilitator">
+  <div class="part-num">Part 03</div>
+  <h2>Facilitator Guide</h2>
+  <p>Everything you need to run this workshop yourself — including what to say, what to watch for, and how to adapt it for different contexts.</p>
+</div>
+
+<div class="section">
+  <div class="section-label">Who can facilitate this</div>
+  <h2>You don't need to be an expert. You need to have lived it.</h2>
+
+  <p>This workshop was designed to be passed on. You don't need a facilitation certification or a coaching background. What you need is real experience inside an open source community — the kind where you've watched someone quietly stop coming, or seen a first-time contributor light up when their pull request got acknowledged.</p>
+
+  <p>If you've felt the difference between a community that has it and one that doesn't — you can facilitate this.</p>
+
+  <div class="tip-box">
+    <strong>The most important thing you bring</strong>
+    A real story. Not a polished "here's what I learned" story. A moment where you got it wrong, or where you saw someone else get it right unexpectedly. That story is what gives permission for the room to be honest.
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Before the session</div>
+  <h2>Preparation Checklist</h2>
+
+  <ul class="checklist">
+    <li>Read the full run sheet at least once before the day</li>
+    <li>Prepare your personal story (opening + Part 3 talk) — keep it under 90 seconds each</li>
+    <li>Print Experience Maps at A3 or larger — one per table</li>
+    <li>Print individual worksheets — one per participant</li>
+    <li>Print take-home cards — one per participant, double-sided if possible</li>
+    <li>Prepare sticky notes in three colors — enough that tables don't run out</li>
+    <li>Confirm room is set in clusters, not rows</li>
+    <li>Identify wall space for each table's gallery walk posting</li>
+    <li>Have markers at every table — fat ones, not biros</li>
+    <li>Do a walk-through of the room before participants arrive</li>
+    <li>Set a large visible timer for activities (phone on table, projected clock, or just announce)</li>
+  </ul>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">What to watch for</div>
+  <h2>Common Moments & How to Handle Them</h2>
+
+  <div class="activity-box">
+    <div class="activity-header"><h4>The table that goes quiet</h4></div>
+    <div class="activity-body">
+      <p>Some tables will have one person who talks and four who listen. Don't intervene immediately. Give it 90 seconds. If the dynamic isn't shifting, ask the quiet people directly: <em>"What does your community look like in this zone?"</em> — addressed by name if you know them, or just by eye contact.</p>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header"><h4>The person who wants to solve everything</h4></div>
+    <div class="activity-body">
+      <p>Every workshop has someone who wants to skip diagnosis and go straight to solutions. In Activity 2, that's premature. Redirect: <em>"That's a great solution — hold it for Activity 3. Right now we're just mapping what's true."</em></p>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header"><h4>The gallery walk that turns into hallway chat</h4></div>
+    <div class="activity-body">
+      <p>People start talking in pairs and stop moving. This is fine for a minute but kills the energy if it goes on. Give a gentle verbal cue: <em>"Two more minutes — try to see at least one more map you haven't looked at."</em></p>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header"><h4>Running over time</h4></div>
+    <div class="activity-body">
+      <p>If you're running late, cut from the Gallery Debrief (take it to 2 min) and the closing mini-talk (cut to 5 min). Never cut Activity 3 or the Closing Wall — those are what people remember and take home.</p>
+    </div>
+  </div>
+
+  <div class="activity-box">
+    <div class="activity-header"><h4>Someone gets emotional</h4></div>
+    <div class="activity-body">
+      <p>It happens. Community leadership is often lonely and exhausting work. If someone gets visibly moved during reflection, don't rush past it. Acknowledge it briefly: <em>"This work matters — and the fact that it matters is exactly why it's hard."</em> Then continue. Don't make it a moment, but don't erase it either.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Adapting this workshop</div>
+  <h2>How to Modify for Different Contexts</h2>
+
+  <div class="two-col">
+    <div>
+      <h3>60-minute version</h3>
+      <p style="font-size:14px;">Cut Activity 1 (The Moment) and go straight to the Experience Map after the opening talk. Shorten gallery walk to 10 minutes. Keep Activity 3 and Closing Wall intact.</p>
+    </div>
+    <div>
+      <h3>Online version</h3>
+      <p style="font-size:14px;">Use Miro or FigJam with pre-built zone templates. Replace gallery walk with a 5-minute async comment round — participants drop stickies on each other's boards before the debrief.</p>
+    </div>
+    <div>
+      <h3>Smaller groups (under 15)</h3>
+      <p style="font-size:14px;">Run as one group instead of tables. Activity 1 becomes a pair share. Gallery walk becomes a single shared map. Works well for leadership teams or co-organizer retreats.</p>
+    </div>
+    <div>
+      <h3>Longer version (2–3 hours)</h3>
+      <p style="font-size:14px;">Add a fifth zone to the map: <strong>First Leadership</strong> — when did they first step up to lead something? This opens a conversation about succession and the pipeline of future organizers.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Passing it on</div>
+  <h2>The Open Source Part</h2>
+
+  <p>This workshop is licensed under Creative Commons Attribution 4.0. That means you can use it, adapt it, translate it, and run it anywhere — as long as you credit the source.</p>
+
+  <p>The point is that this knowledge travels the same way all good community knowledge travels: person to person, in rooms, with sticky notes and stories. Not locked in a course behind a paywall.</p>
+
+  <div class="big-quote">"The only way to learn it is to be inside a community with other humans. The learning requires the belonging."</div>
+
+  <p>If you run this workshop, consider sharing your adapted version back. What zones did your community name? What stickies kept appearing? What did you change? That's the data that makes this resource better for everyone who uses it next.</p>
+
+  <div class="tip-box">
+    <strong>How to share</strong>
+    Tag your posts #ExperienceIsEverything and mention where the resource came from. If you translate it or adapt it significantly, share the new version with the same CC BY 4.0 license so the next facilitator can use yours too.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="os-footer">
+  <div style="max-width:860px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:48px;">
+    <div>
+      <h3>The Experience Is Everything</h3>
+      <p>A workshop on what makes people stay in open source communities — and what makes them leave.</p>
+      <p style="margin-top:12px;">Part of an ongoing open source knowledge project on community leadership. The management of people in open source communities is one of the most important undocumented knowledge systems in tech. This workshop is one piece of making it visible.</p>
+      <div class="license-badge">CC BY 4.0 — Free to use, share, and adapt with attribution</div>
+    </div>
+    <div>
+      <h3>Contribute</h3>
+      <p>Run this workshop? Adapt it? Translate it?</p>
+      <p style="margin-top:8px;">Share what you learned. Tag: <span style="color:var(--yellow);">#ExperienceIsEverything</span></p>
+      <p style="margin-top:16px;opacity:0.5;font-size:11px;">Version 1.0<br>Conference format<br>20–50 participants</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress').style.width = progress + '%';
+  });
+</script>
+
+</body>
+</html>
