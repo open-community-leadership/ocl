@@ -1,4 +1,4 @@
-# POPCOM — Power of People in Open Communities
+# POPCOM Framework
 
 *The core framework of Open Community Leadership (OCL)*
 
