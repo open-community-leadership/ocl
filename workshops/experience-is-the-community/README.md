@@ -44,8 +44,8 @@ Designed for conference format (20–50 participants). Fully printable. Free to 
 
 ## Quick start
 
-1. Open `participant-toolkit.html` in any browser
-2. Use the Print button to print the full package
+1. Open `participant-toolkit` in any browser
+2. Print button print the full pdf
 3. Print Experience Maps at A3 or larger — one per table
 4. Prepare sticky notes in green, red, and yellow
 
