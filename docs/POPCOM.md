@@ -45,12 +45,16 @@ Without ownership transfer, communities become dependent on a single person or s
 - Who owns what in your community? And do they know it?
 - How does someone move from participant to owner of something?
 - Is ownership offered, or does someone have to ask for it?
+- Is there any onboarding for the ownership?
+- Is the leader recognised for the ownership? 
 - What happens to ownership when a leader leaves?
+- Was there an offboarding for the transfer of knowledge?
 
 **Signs this dimension is broken:**
-- One or two people do everything
+- One or two people do everything or an entire group is in charge but no one leads
 - Volunteers do not know what they are responsible for
 - Nothing is documented, so only the founder knows how it works
+
 
 ---
 
@@ -69,8 +73,10 @@ Purpose is not a mission statement. It is felt. It is whether someone would desc
 
 **Signs this dimension is broken:**
 - Attendance drops without obvious cause
+- Attendees come but not many stay
 - Long-term members become passive
 - Events feel like obligations rather than gatherings
+- Members felt that their attendance do not really matter
 
 ---
 
@@ -85,12 +91,14 @@ Communities with strong connection are resilient. When something goes wrong, peo
 - Do members know each other and not just the organiser?
 - Are there spaces and moments designed for relationship-building, not just content delivery?
 - Do people in your community help each other outside of official events?
+- Do people in your community meet up outside the official meetings/events?
 - Would your community continue if you were not there?
 
 **Signs this dimension is broken:**
 - Members only interact with the organiser, not each other
 - No informal spaces or side conversations
 - The community feels like an event series, not a community
+- The community does not know how to communicate or continue without the organiser
 
 ---
 
@@ -106,9 +114,11 @@ Opportunity is about creating pathways: from attendee to speaker, from volunteer
 - Are there visible paths from participation to leadership?
 - Do you actively invite people to take on more, or wait for them to ask?
 - Are opportunities distributed equitably?
+- Are the opportunities documented in places accessible to the community?
 
 **Signs this dimension is broken:**
 - The same people speak, lead, and organise year after year
+- When members are not given the chance to 
 - New members plateau quickly
 - Talented contributors leave for other communities
 
@@ -117,9 +127,9 @@ Opportunity is about creating pathways: from attendee to speaker, from volunteer
 ### M — Mentorship
 *How communities reproduce themselves.*
 
-Mentorship is how communities survive beyond their founders. It is the transmission of knowledge, values, and practice from experienced members to newer ones — not through documentation alone, but through relationship.
+Mentorship is how communities survive beyond their founders. It is the transmission of knowledge, values, and practice from experienced members to newer ones. It is not through documentation alone, but through relationship.
 
-This is the dimension that open source communities most consistently neglect. And it is why so many communities die with their founders.
+This is the dimension that open source communities most consistently neglect. And it is why so many communities fall apart with their founders.
 
 **Questions to ask:**
 - Who is teaching the next generation of leaders in your community?
