@@ -6,7 +6,7 @@
 
 ## Overview
 
-A 90-minute interactive workshop for open source community leaders. Participants explore three POPCOM dimensions — **Participation**, **Connection**, and **Mentorship** — through their own community experiences.
+A 90-minute interactive workshop for open source community leaders. Participants map the experience of their own community using POPCOM as the underlying framework.
 
 Designed for conference format (20–50 participants). Fully printable. Free to run, adapt, and share.
 
@@ -14,23 +14,34 @@ Designed for conference format (20–50 participants). Fully printable. Free to 
 
 ---
 
-## POPCOM dimensions covered
+## What this workshop covers
 
-| Dimension | How it appears in this workshop |
-|-----------|--------------------------------|
-| Participation | Activity 1: The Moment — brainstorming what makes people join and stay |
-| Connection | Activity 2: Community Experience Map — mapping the four zones of belonging |
-| Mentorship | Closing reflection — you are part of the experience; how you show up shapes it |
+This is the entry point into the POPCOM framework.
 
+Introduces the central idea: the experience is the community. Hands over a working tool: the Community Experience Canvas. The point is to walk out diagnosing your own community, not just describing one in theory.
+
+Two POPCOM dimensions show up directly in the canvas: Participation and Connection. They're so central to community life they earned their own moment in the journey. The other POPCOM dimensions are covered in future workshops.
+
+## Workshop arc
+ 
+| Segment | What happens |
+|---------|--------------|
+| POPCOM intro | Frame the wider module. Why we're here. |
+| The Experience | Set the thesis: the experience IS the community. |
+| Activity 1: Stay / Leave Reflection | Personal mapping. Why people stay. Why they leave. |
+| Activity 2: Community Experience Canvas | Fill in the eight stages of someone's journey through your community. |
+| Activity 3: What's Missing? | Interactive discussions and games. Each participant names the single most important thing missing from their community's experience. |
+| Feedback |  |
 ---
 
 ## What participants leave with
 
 - A shared language for the human side of community building (POPCOM)
-- A completed Community Experience Map of their own community
-- One concrete action to improve their community's experience next week
-- A take-home card with the four-zone framework
-- Permission to teach this to someone else
+- A completed Community Experience Canvas of their own community
+- The single most important thing missing from their community's experience
+- One concrete action to improve it in the next month
+- A take-home card with the canvas and a link to teach the module themselves
+
 
 ---
 
@@ -45,9 +56,12 @@ Designed for conference format (20–50 participants). Fully printable. Free to 
 ## Quick start
 
 1. Open `participant-toolkit` in any browser
-2. Print button print the full pdf
+2. Print the full pdf
 3. Print Experience Maps at A3 or larger — one per table
 4. Prepare sticky notes in green, red, and yellow
+
+## Materials required
+
 
 ---
 
