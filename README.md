@@ -16,7 +16,7 @@ These are the skills no school nor company teaches or documents. The skills that
 
 OCL gives community leaders a shared language, practical tools, and a place to learn from each other.
 
-The**POPCOM** framework, explores how participation, belonging, mentorship, and community experience help communities create future contributors, organisers, and leaders.
+The **POPCOM** framework, explores how participation, belonging, mentorship, and community experience help communities create future contributors, organisers, and leaders.
 
 ---
 
