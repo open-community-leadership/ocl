@@ -1,3 +1,4 @@
+Coming soon!!
 <!-- # Module 04 — Connection and Belonging
 
 **POPCOM dimensions: Connection · Purpose**
