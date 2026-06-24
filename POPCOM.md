@@ -146,13 +146,13 @@ This is the dimension that open source communities most consistently neglect. An
 
 ## Using POPCOM in practice
 
-**For individuals:** Use the [Leadership Passport](../templates/module-completion-log.md) to reflect on your own journey across the six dimensions.
+**For individuals:** Use the [Leadership Passport](resources/templates/module-completion-log.md) to reflect on your own journey across the six dimensions.
 
-**For communities:** Use the [Community Health Check](../templates/community-experience-canvas.md) to assess where your community stands.
+**For communities:** Use the [Community Health Check](resources/templates/community-experience-canvas.md) to assess where your community stands.
 
-**For workshops:** Start with [Workshop 1 — The Experience Is the Community](../workshops/experience-is-the-community/), which introduces Participation, Connection, and Mentorship through lived experience.
+**For workshops:** Start with [Workshop 1 — The Experience Is the Community](workshops/experience-is-the-community/), which introduces Participation, Connection, and Mentorship through lived experience.
 
-**For modules:** Each OCL module maps to one or more POPCOM dimensions. See the [framework overview](framework.md) for the full mapping.
+**For modules:** Each OCL module maps to one or more POPCOM dimensions. See the [framework overview](resources/framework.md) for the full mapping.
 
 ---
 

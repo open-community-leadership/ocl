@@ -1,3 +1,4 @@
+Coming soon!!
 <!-- # Module 02 — Welcome and Onboarding
 
 **POPCOM dimensions: Participation · Connection**

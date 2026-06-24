@@ -33,7 +33,7 @@ POPCOM maps the six forces that determine whether a community grows, stagnates, 
 | **O** | Opportunity | How contributors grow |
 | **M** | Mentorship | How communities reproduce themselves |
 
-→ [Full POPCOM Framework](docs/POPCOM.md)
+→ [Full POPCOM Framework](POPCOM.md)
 
 ---
 
@@ -74,6 +74,8 @@ POPCOM maps the six forces that determine whether a community grows, stagnates, 
 
 ## Recognition
 
+To be updated soon
+
 <!-- Badges are practical markers of applied community leadership — not exams, not certificates. Proof that someone has practised a skill and shared what they learned.
 
 | Badge | How to earn it |
@@ -83,7 +85,7 @@ POPCOM maps the six forces that determine whether a community grows, stagnates, 
 | **Community Leader** | Complete all 8 modules |
 | **Community Mentor** | Complete modules and help another person or community use at least one |
 
-→ [Full badge details](docs/badges.md) -->
+→ [Full badge details](resources/badges.md) -->
 
 ---
 
@@ -92,18 +94,14 @@ POPCOM maps the six forces that determine whether a community grows, stagnates, 
 ### Workshop 1 — The Experience Is the Community
 *Introducing POPCOM: Participation, Connection, and Mentorship*
 
-A 90-minute interactive workshop for open source community leaders. Designed for conference format (20–50 participants). Fully printable. Free to run, adapt, and share.
-
-First delivery: **EuroPython 2026**
-
 → [Workshop materials](workshops/experience-is-the-community/)
 
 ---
 
 ## Templates and tools
 
-- [Community Experience Canvas](templates/community-experience-canvas.md)
-- [Module Completion Log](templates/module-completion-log.md)
+- [Community Experience Canvas](resources/templates/community-experience-canvas.md)
+- [Module Completion Log](resources/templates/module-completion-log.md)
 
 ---
 
