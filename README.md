@@ -16,7 +16,7 @@ These are the skills no school nor company teaches or documents. The skills that
 
 OCL gives community leaders a shared language, practical tools, and a place to learn from each other.
 
-The **POPCOM** framework, explores how participation, belonging, mentorship, and community experience help communities create future contributors, organisers, and leaders.
+The **POPCOM** framework explores how participation, belonging, mentorship, and community experience help communities create future contributors, organisers, and leaders.
 
 ---
 
@@ -91,7 +91,7 @@ To be updated soon
 
 ## Workshops
 
-### Workshop 1 — The Experience Is the Community
+### Workshop 1 - The Experience Is the Community
 *Introducing POPCOM: Participation, Connection, and Mentorship*
 
 → [Workshop materials](workshops/experience-is-the-community/)
@@ -125,8 +125,8 @@ This is intentional. The whole point is that this knowledge travels. Person to p
 
 ## About
 
-OCL was created by [Georgi Ker](https://georgiker.com)
+OCL was created by [Georgi Ker](https://georgiker.com).
+
 OCL is developed as part of a [Sovereign Tech Fund](https://sovereigntechfund.de) fellowship (2026 cohort).
 
 *"The experience is what makes people stay. And it is also what makes them leave."*
-       s
