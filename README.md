@@ -61,9 +61,14 @@ Mentors can support participants as they complete the modules, reflect on their 
 
 Before mentoring a workshop, it is strongly recommended to attend that workshop once as a participant.
 
+> [!TIP]
+> OCL is modular. You do not need to complete every module or follow them in order. Start with the module that best matches the needs of you or your community, and return to the others when they become useful.
+
 ---
 
 ## Modules
+
+Choose the module that best fits the challenge you are working on. The modules can be completed in any order.
 
 | # | Module | POPCOM dimension(s) |
 |---|--------|---------------------|
