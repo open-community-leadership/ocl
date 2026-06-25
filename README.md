@@ -16,7 +16,9 @@ These are the skills no school nor company teaches or documents. The skills that
 
 OCL gives community leaders a shared language, practical tools, and a place to learn from each other.
 
-The **POPCOM** framework explores how participation, belonging, mentorship, and community experience help communities create future contributors, organisers, and leaders.
+The **POPCOM** framework helps communities understand the experiences that shape how people join, participate, build relationships, take responsibility, grow, and eventually support others.
+
+It gives community leaders a shared way to identify what is working, what is missing, and where a practical change could make the community easier to enter, contribute to, and sustain.
 
 ---
 
@@ -49,11 +51,15 @@ POPCOM maps the six forces that determine whether a community grows, stagnates, 
 
 ## How to use this repository
 
-**Self-guided:** Read the modules, complete the exercises, use  and adapt the templates in your own community.
+**Self-guided:** Read the modules, complete the exercises, use and adapt the templates in your own community.
 
-**Workshop:** Run the workshop activities with your organising team or local community.
+**Workshop:** Attend a facilitated workshop or use the workshop materials with your community or organising team.
 
 **Cohort or mentorship program:** Use the modules as a curriculum for a community leadership cohort.
+
+Mentors can support participants as they complete the modules, reflect on their community experience, and apply what they learn.
+
+Before mentoring a workshop, it is strongly recommended to attend that workshop once as a participant.
 
 ---
 
@@ -90,20 +96,26 @@ To be updated soon
 ---
 
 ## Workshops
+Browse all facilitated workshops, participant materials, and facilitator guides.
 
-### Workshop 1 - The Experience Is the Community
-*Introducing POPCOM: Participation, Connection, and Mentorship*
-
-→ [Workshop materials](workshops/experience-is-the-community/)
 
 ---
 
 ## Templates and tools
+Browse all canvases, worksheets, completion logs, and reusable community tools.
 
 - [Community Experience Canvas](resources/templates/community-experience-canvas.md)
 - [Module Completion Log](resources/templates/module-completion-log.md)
 
 ---
+
+## Start here
+
+New to OCL?
+
+Begin with **Workshop 1: The Experience Is the Community**, the introduction to the POPCOM framework.
+
+→ [Workshop 1 materials](workshops/experience-is-the-community/)
 
 ## Contributing
 
