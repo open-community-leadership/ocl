@@ -1,10 +1,10 @@
-# Facilitator Guide
+# General Mentor Guide
 
-## Role of the facilitator
+## Role of the mentor
 
 Your role is not to lecture. Your role is to help community leaders notice what is already happening in their communities and turn that into practical action.
 
-## Facilitation principles
+## Mentoring principles
 
 - Make the room do the thinking.
 - Ask concrete questions.
@@ -31,3 +31,5 @@ Do not ask for names or identifying details. Redirect toward patterns and action
 Example:
 
 > We do not need to name the person or community. What pattern should organisers learn from this?
+
+For guide on how to run each individual module, please check 
