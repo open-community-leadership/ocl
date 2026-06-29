@@ -72,7 +72,7 @@ Choose the module that best fits the challenge you are working on. The modules c
 
 | # | Module | POPCOM dimension(s) |
 |---|--------|---------------------|
-| 01 | [Experience Is the Community](modules/01-experience-is-the-community/) | Participation, Purpose |
+| 01 | [Experience Is the Community](modules/01-experience-is-the-community/) | Participation, Connection |
 | 02 | [Welcome and Onboarding](modules/02-welcome-and-onboarding/) | Participation, Connection |
 | 03 | [Participation](modules/03-participation/) | Participation |
 | 04 | [Connection and Belonging](modules/04-connection-and-belonging/) | Connection, Purpose |
