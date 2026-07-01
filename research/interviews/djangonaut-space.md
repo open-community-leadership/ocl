@@ -12,7 +12,7 @@
 
 Djangonaut Space is a structured contributor programme for the Django open source project. It runs cohort-based cycles to help new contributors make their first meaningful contributions to Django, supported by experienced technical mentors (called Navigators), experienced community mentors (called Captains) and a coordinating team.
 
-It was founded by 5 people and has been running for approximately 3 years, with support from the Django Software Foundation (DSF). The programme runs 3 cohort sessions per year, each lasting 16 weeks.
+It was founded by 5 people and has been running for approximately 3 years, with support from the Django Software Foundation (DSF). The programme runs 2 sessions per year, each lasting 8 weeks. A session involves 16 weeks of effort from session organizers.
 
 This conversation was an opportunity to understand how Djangonaut Space works, learn from their experience, and explore how OCL could be structured better to support the wider open source ecosystem.
 
