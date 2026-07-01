@@ -71,7 +71,7 @@ Their experience provides a practical reference point for the POPCOM framework â
 
 ### Keeping People Going
 
-- The 16-week cycle is designed to move participants from *uncomfortable to comfortable*, not just to complete a checklist.
+- The 8-week cycle is designed to move participants from *uncomfortable to comfortable*, not just to complete a checklist.
 - The programme has a deliberate mentorship feel throughout.
 - Regulars who keep showing up and show initiative are given more responsibility over time.
 
