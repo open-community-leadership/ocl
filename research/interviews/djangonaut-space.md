@@ -42,8 +42,9 @@ Their experience provides a practical reference point for the POPCOM framework â
 
 ### Roles and Structure
 
-- Captain roles provide mentorship within each cohort. Captains rotate to avoid concentration of responsibility.
-- There is always an admin role in place for operational continuity.
+- There are two roles within each cohort: Navigators and Captains.
+- Captains rotate between sessions, not within a session.
+- A group of session organisers runs the programme, with at least one admin in place for operational continuity.
 - Ownership is given deliberately. Participants are brought into responsibility roles based on demonstrated competency and initiative, not just tenure.
 
 **OCL relevance:** Strong mapping to the Ownership and Mentorship dimensions of POPCOM.
