@@ -83,7 +83,7 @@ Their experience provides a practical reference point for the POPCOM framework â
 
 - Recognition is taken seriously and delivered at multiple levels: celebration channels, social media shoutouts, completion certificates.
 - The message that contributions are valuable comes from leadership, not just peers.
-- The team described it as intentionally "over the top". Recognition should feel more than adequate, not just adequate.
+- The team described their new member welcome as intentionally "over the top". Recognition should feel more than adequate, not just adequate.
 - Participants described feeling rewarded by being part of something, achieving things they couldn't do alone, and making things easier for others who come after them.
 
 **OCL relevance:** Maps to the Recognition stage of the Community Experience Canvas and the Opportunity dimension of POPCOM. The "over the top" framing is a useful design principle for facilitators.
