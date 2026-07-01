@@ -34,7 +34,7 @@ Their experience provides a practical reference point for the POPCOM framework â
 
 - The team reaches out directly to people with experience, rather than waiting for applications to come in.
 - There is a defined quality bar for participants. They are selective about who joins.
-- Teams are matched by process and working style, with deliberate attention to language: the programme is English-based, and they make space for participants who aren't fully confident in English.
+- Teams are matched by interest and availability. As the programme is English-based, and they make space for participants who aren't fully confident in English.
 
 **OCL relevance:** Intentional onboarding and language inclusion directly map to the Welcome and Participation stages of the Community Experience Canvas.
 
