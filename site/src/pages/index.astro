@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const popcom = [
+  ['P', 'Participation', 'How people join'],
+  ['O', 'Ownership', 'How people gain responsibility'],
+  ['P', 'Purpose', 'Why people stay'],
+  ['C', 'Connection', 'How relationships form'],
+  ['O', 'Opportunity', 'How contributors grow'],
+  ['M', 'Mentorship', 'How communities reproduce themselves'],
+];
+---
+<Base title="Home">
+  <section class="hero">
+    <div class="hero-main">
+      <h1>Open Community Leadership</h1>
+      <h2>Helping communities create future contributors and leaders</h2>
+      <p>
+      Open Community Leadership (OCL) is an open-source project that captures the community knowledge usually held by people and turns it into practical frameworks, tools, and learning resources. Through POPCOM, it helps communities understand how people join, contribute, take responsibility, and grow into future leaders. 
+      </p>
+      <div class="cta-row">
+        <a class="cta solid" href={`${base}/popcom/`}>Explore the framework</a>
+        <a class="cta" href={`${base}/modules/`}>Start a module</a>
+      </div>
+    </div>
+    <div class="hero-margin" aria-hidden="true">
+      <span>CC BY 4.0 · Est. 2026</span>
+    </div>
+  </section>
+
+  <section class="spec">
+    <div class="spec-label"><span class="label">The framework:</span></div>
+    <div class="spec-body">
+      <table class="popcom">
+        <tbody>
+          {popcom.map(([letter, dim, desc]) => (
+            <tr>
+              <td class="letter">{letter}</td>
+              <td class="dim">{dim}</td>
+              <td class="desc">{desc}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="spec">
+    <div class="spec-label"><span class="label">The paths:</span></div>
+    <div class="spec-body" style="padding: 0;">
+      <div class="paths">
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Self-guided</h3>
+            <p>Work through the modules at your own pace</p>
+          </a>
+        </div>
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Workshop</h3>
+            <p>Facilitated sessions with your organising team</p>
+          </a>
+        </div>
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Mentor</h3>
+            <p>Support others as they grow into leadership</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

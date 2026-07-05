@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDocSplit, listResourceSections } from '../lib/content.js';
+const { html, attributionHtml } = renderDocSplit('resources/README.md');
+const sections = listResourceSections();
+---
+<Base title="Resources">
+  <article class="prose" set:html={html} />
+  <div class="prose">
+    {sections.map((section) => (
+      <section>
+        <h2>{section.title}</h2>
+        {section.description && <p>{section.description}</p>}
+        {section.files.length > 0 ? (
+          <ul>
+            {section.files.map((file) => (
+              <li><a href={file.href}>{file.name}</a></li>
+            ))}
+          </ul>
+        ) : (
+          <p><em>No files yet.</em></p>
+        )}
+      </section>
+    ))}
+  </div>
+  {attributionHtml && <div class="prose" set:html={attributionHtml} />}
+</Base>

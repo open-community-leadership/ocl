@@ -1,0 +1,15 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { listModules, renderModuleDoc } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return listModules()
+    .map((m) => ({ params: { slug: m.slug }, props: renderModuleDoc(m.slug, 'mentor-guide') }))
+    .filter((entry) => entry.props);
+}
+
+const { title, html } = Astro.props;
+---
+<Base title={title}>
+  <article class="prose" set:html={html} />
+</Base>

@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDoc } from '../lib/content.js';
+const html = renderDoc('mentor-guide/README.md');
+---
+<Base title="Mentor guide">
+  <article class="prose" set:html={html} />
+</Base>

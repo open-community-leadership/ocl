@@ -1,0 +1,17 @@
+{
+  "name": "ocl-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource/lora": "^5.1.0",
+    "@fontsource/poppins": "^5.1.0",
+    "astro": "^5.1.0",
+    "marked": "^15.0.0"
+  }
+}
