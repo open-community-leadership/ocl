@@ -93,12 +93,16 @@ Nothing you share about your community leaves the room.
 
 ## After the workshop
 
-If the workshop lands, you'll want to keep going. Three ways forward:
+Complete the workshop activities and submit the required evidence to earn the **Experience** badge.
+Then put the work into practice by testing the one change you chose during the workshop.
+You can also:
 
-- **Work through it on your own** — the [Self-guided](self-guided.md) path, at your own pace.
-- **Mentor someone else through it** — [Mentor someone](mentor.md).
+- **Apply what you learned** — test the one change you chose and record what happened.
+- **Revisit the module independently** — use the [Self-guided](modules/01-experience-is-the-community/self-guided.md) path and work at your own pace.
+- **Become a Pathmaker** — [Mentor someone](modules/01-experience-is-the-community/mentor-guide.md). use the Pathmaker Guide to support another community leader through the module.
 
-If you tried your one change, tell someone. Tag **#OpenCommunityLeadership**.
+Supporting others through the module contributes towards earning the **Lead Pathmaker** badge.
+Share what you tested and what you learned using **#OpenCommunityLeadership**.
 
 ---
 *Workshops can be taken in any order unless otherwise stated.*
