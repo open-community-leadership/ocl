@@ -10,10 +10,15 @@ This is the first module in OCL, where the POPCOM framework is introduced and wh
 
 
 ---
+## About POPCOM
+
+POPCOM names the human structure underneath a healthy community the six things that decide whether people stay, contribute, and eventually lead. It's the lens OCL uses across every module: Participation, Ownership, Purpose, Connection, Opportunity, Mentorship.
+
+You'll meet the framework properly here, and use it to look at your own community for the first time.
 
 ## Goal
 
-By the end of this module, you can **map your community's experience across its eight stages and identify the one change that would most improve whether people stay.**
+By the end of this module, you can **map your community's experience across its eight stages and identify the one change that would most improve whether people stay in the community.**
 
 ## Your intention
 Before you begin, decide what you want to gain from this module for your community.
@@ -22,9 +27,10 @@ Keep that intention alongside the module goal. The goal gives the work direction
 
 ---
 
+
 ## Where this fits in POPCOM
 
-POPCOM is the framework underneath OCL — the lens running through every module. This module covers the foundation the rest sits on: the experience itself.
+POPCOM is the framework underneath OCL — the lens running through every module. 
 
 As you work, you'll meet two POPCOM dimensions as named stages on the canvas: **Participation** and **Connection**. They shape community life so directly that they need their own place in the journey. That's not coincidence. POPCOM dimensions aren't abstract ideas. They show up in concrete moments: how someone enters, whether they feel noticed, what they are invited to do, and whether they are given a reason to return.
 
@@ -55,7 +61,7 @@ The canvas works across different kinds of community spaces. Each stage includes
 - [`Community-Experience-Canvas.pdf`](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
 - [`Community-Experience-Canvas-examples.pdf`](../../resources/examples/module-01/OCL%20%C2%B7%20WORKSHOP%201%20%C2%B7%20Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
 
-Print the canvas at A3 for group work or A4 for individual use.
+Print the canvas at A3 for group work or A4 for individual use. This canvas is essential for this module.
 ---
 
 ## Reflect
@@ -82,18 +88,19 @@ The module is complete when you can share:
 
 A real-world improvement tested later is the strongest evidence of all.
 
-That is when the module stops being an exercise and starts changing how your community works.
+
+That is when you notice how this module can change how your community works for the better.
 ---
 
 ## Earn the Experience badge
 Complete the module and submit the required evidence to earn the Experience badge.
 
 The badge recognises that you can:
-
-- examine a community experience honestly
-- identify a meaningful gap
-- choose a practical improvement
-- connect that improvement to whether people stay and return
+(here you dont capitalize the sentences as you did elswhere)
+- Examine a community experience honestly
+- Identify a meaningful gap
+- Choose a practical improvement
+- Connect that improvement to whether people stay and return
 
 The badge can be earned through the self-guided path or by attending a workshop.
 
