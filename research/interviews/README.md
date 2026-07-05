@@ -1,6 +1,6 @@
-# Worksheets
+# Interviews
 
-Printable activity sheets used during workshops and self-guided learning.
+A collection of interviews gathered over time to understand how successful open source groups manage their projects.
 
 ---
 

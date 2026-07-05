@@ -7,6 +7,7 @@ This project welcomes contributions from community organisers, maintainers, volu
 ## Ways to contribute
 
 - Suggest improvements to modules
+- Suggest a new module
 - Add examples from your community
 - Translate resources
 - Share case studies
@@ -25,3 +26,8 @@ This project welcomes contributions from community organisers, maintainers, volu
 ## Case studies
 
 When contributing a case study, please avoid sharing private conflict details, identifiable personal information, or sensitive internal community matters without consent.
+
+## Licensing your contribution
+
+By contributing you agree your work is released under the same terms as the
+project: CC BY 4.0 (see LICENSE.md).

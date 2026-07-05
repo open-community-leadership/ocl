@@ -1,85 +1,135 @@
-# Experience Is the Community
+# Module 1 — Experience is the Community
 
-## Purpose
-
-This module introduces the central idea of Open Community Leadership:
+*Open Community Leadership (OCL) · Introducing the POPCOM Framework*
 
 > The experience is the community.
 
-People do not stay only because a community has useful information. They stay because of what it feels like to be there.
+People don't stay only because a community has useful information. They stay because of what it feels like to be there. They leave for the same reason. They may say they got busy, but more often the community stopped giving them a reason to return.
 
-The same is true when people leave. They may say they got busy, but often the community experience stopped giving them a reason to return.
+This is the first module in OCL, where the POPCOM framework is introduced and where you use it to evaluate the current state of your community.
 
-## What you will learn
 
-- Why experience shapes community retention
-- How to identify stay factors and leave factors
-- How to map the experience of different community members
-- How to choose one improvement that makes the community easier to return to
+---
 
-## Key idea
+## Goal
 
-Schools teach knowledge. Companies teach process. Books teach concepts. 
+By the end of this module, you can **map your community's experience across its eight stages and identify the one change that would most improve whether people stay.**
 
-Communities teach the human infrastructure: how people learn from people, trust people, disagree, repair, participate, and eventually lead.
+## Your intention
+Before you begin, decide what you want to gain from this module for your community.
 
-## Activity 1: Stay / Leave Reflection
+Keep that intention alongside the module goal. The goal gives the work direction. Your intention gives it meaning.
 
-Individually, answer:
+---
 
-1. Think of a community you stayed in. Why did you stay?
-2. Think of a community you left. Why did you leave?
+## Where this fits in POPCOM
 
-Write one reason per sticky note or line.
+POPCOM is the framework underneath OCL — the lens running through every module. This module covers the foundation the rest sits on: the experience itself.
 
-As a group, cluster the answers into themes.
+As you work, you'll meet two POPCOM dimensions as named stages on the canvas: **Participation** and **Connection**. They shape community life so directly that they need their own place in the journey. That's not coincidence. POPCOM dimensions aren't abstract ideas. They show up in concrete moments: how someone enters, whether they feel noticed, what they are invited to do, and whether they are given a reason to return.
 
-Common stay themes:
+Future modules explore the other dimensions more deeply.
+---
 
-- Felt welcomed
-- Made friends
-- Was trusted
-- Was useful
-- Was recognised
-- Was growing
+## What you'll learn
 
-Common leave themes:
+- Why experience shapes whether people stay or leave
+- How to map a person’s journey through your community
+- How to identify the stage where people may be quietly dropping away
+- How to choose one concrete change that makes returning more likely
 
-- Felt ignored
-- Felt unsafe
-- Felt embarrassed
-- Felt excluded
-- Felt stuck
-- Felt burned out
+---
 
-## Activity 2: Experience Audit
+## The Community Experience Canvas
 
-Choose one community you are part of.
+The core tool for this module is the **Community Experience Canvas** — a one-page map of the eight stages a person moves through inside a community: Arrival, Welcome, Participation, Connection, Recognition, Growth, Safety, Return.
 
-Answer:
+The canvas works across different kinds of community spaces. Each stage includes prompts for:
 
-- What does a newcomer experience in the first 10 minutes?
-- What does a returning member experience in the first month?
-- What does a volunteer experience after helping three times?
-- What does an organiser experience when they are tired?
-- What does someone experience when they make a mistake?
+- In-person communities
+- Open source projects
+- Live online communities
 
-## Action
+### Resources
 
-Choose one experience to improve in the next month.
+- [`Community-Experience-Canvas.pdf`](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
+- [`Community-Experience-Canvas-examples.pdf`](resources/examples/module-01/OCL · WORKSHOP 1 · Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
 
-Use this format:
+Print the canvas at A3 for group work or A4 for individual use.
+---
 
-- Current experience:
-- Desired experience:
-- First practical action:
-- Who needs to be involved:
-- How we will know it improved:
+## Reflect
+
+Before you call it done:
+
+- What surprised you about your own community?
+- What's the one thing you're taking back?
+- Is the current experience sustainable for me and for the people I lead?
+- What would make someone want to return?
+
+---
 
 ## Completion evidence
 
-To complete this module, share:
+You can complete this module through any of the three learning paths.
 
-- Your stay/leave themes
-- One completed experience audit
-- One planned or tested improvement
+The module is complete when you can share:
+
+1. Your Stay and Leave themes
+2. One completed Community Experience Canvas
+3. The most important thing missing from your community's experience
+4. One improvement you have planned or tested
+
+A real-world improvement tested later is the strongest evidence of all.
+
+That is when the module stops being an exercise and starts changing how your community works.
+---
+
+## Earn the Experience badge
+Complete the module and submit the required evidence to earn the Experience badge.
+
+The badge recognises that you can:
+
+- examine a community experience honestly
+- identify a meaningful gap
+- choose a practical improvement
+- connect that improvement to whether people stay and return
+
+The badge can be earned through the self-guided path or by attending a workshop.
+
+Testing your improvement in a real community strengthens the evidence and gives you something useful to carry into future modules.
+
+---
+
+## Teach this module
+Guiding this module and reflecting on your practice can contribute towards earning the Lead Pathmaker badge.
+
+This module is CC BY 4.0. You can run it in your community, your meetup, your workplace — no permission needed. Read the path that fits, adapt the timing, and share what you changed. Tag **#OpenCommunityLeadership** so the next facilitator can learn from your run.
+
+---
+
+## Pick your path
+
+This module works three ways. They cover the same arc — set the thesis, map your community, find what's missing, commit to one change — but how you do it depends on why you're here.
+
+- **[Self-guided](modules/01-experience-is-the-community/self-guided.md)** — working on your own, at your own pace. ~30–45 min.
+- **[Attend a workshop](modules/01-experience-is-the-community/workshop.md)** — join a live session someone runs.
+- **[The Pathmaker's Guide](modules/01-experience-is-the-community/mentor-guide.md)** — guiding another person or a small cohort. Flexible.
+
+Each path is designed to stand on its own.
+
+---
+
+## Share what you learn
+
+If you test your improvement, run the module, or adapt it for another community, share what happened.
+
+Tag #OpenCommunityLeadership so other community leaders and Pathmakers can learn from your experience.
+
+---
+
+## License
+
+CC BY 4.0 — Open Community Leadership. Free to use, adapt, and share with attribution.
+
+OCL was started and is maintained by Georgi Ker.

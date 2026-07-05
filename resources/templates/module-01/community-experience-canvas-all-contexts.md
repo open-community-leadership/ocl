@@ -8,11 +8,11 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 - **In person** — meetups, conferences, user groups, events
 - **Repo** — projects, maintainer work, async contribution
-- **Online live** — sprints, calls, Discord/Slack, virtual events
+- **Online** — sprints, calls, Discord/Slack, virtual events
 
 ---
 
-**Community name:** ______________________  **Context:** ______________________  **Date:** __________
+**Community name:** ______________________  **Rolet:** ______________________  **Date:** __________
 
 ---
 
@@ -20,7 +20,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *How do people discover you exist? What do they feel before they show up?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | How do people hear about the meetup? What do they see before they walk in? | How do people find the project? What does the README say in the first five seconds? | How do people find the sprint or call? Do they know what they're walking into? |
 
@@ -30,7 +30,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *How does a newcomer learn they're in the right place — and that someone noticed they arrived?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | Who greets people at the door? How does a first-timer know where to sit? | What does a newcomer see automatically when they first open an issue or PR? *(the instant acknowledgement)* — and who replies to them personally, how fast? *(the human follow-through)* | Are people named as they join? Is there a pinned "new here? start here" message? Is anyone assigned to make sure newcomers aren't stranded? |
 
@@ -42,7 +42,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *What can someone do besides watch? What's the smallest useful thing they can contribute?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | What can a newcomer do at their first meetup besides listen? Is there a low-stakes way in? | What's the smallest useful contribution — a typo fix, a docs edit, a `good first issue`? Does that label have real issues behind it? | Can a newcomer do something in their first session, or do they just lurk? |
 
@@ -52,7 +52,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *How do people meet each other? Where do relationships actually form?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | Where do people talk who aren't already friends? Is there time that isn't the talk? | Do contributors ever interact with each other, or only with you? Is there anywhere that isn't a pull request? | Where do relationships form outside the formal session? Is there a backchannel, a social moment? |
 
@@ -62,7 +62,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *How do people know their effort mattered? And who notices the person who comes back a second time?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | How are volunteers and speakers thanked? Does a regular feel seen, or taken for granted? | When lots of people arrive at once, who notices? What happens to someone on their *second* contribution — is there anything waiting for them? | Are contributions acknowledged in the moment? Does a returning participant get recognised as a returner? |
 
@@ -74,7 +74,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *How does someone take on more? How do people learn to lead here?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | How does an attendee become a volunteer, then an organiser? Is there a path, or does it depend on knowing you? | How does a one-time contributor become a regular, then a maintainer? Who hands over responsibility? | How does a sprint participant become a navigator or mentor for the next cohort? |
 
@@ -84,7 +84,7 @@ Find your context. If you lead more than one kind of community, fill in more tha
 
 *What happens when something goes wrong? How do people raise concerns?*
 
-| In person | Repo | Online live |
+| In person | Repo | Online |
 |-----------|------|-------------|
 | Is there a code of conduct people actually know about? What happens when someone's uncomfortable? | What happens when a contribution is wrong or a discussion gets heated? Is disagreement repaired or left to fester? | Who's holding the room on a call? What happens if someone's talked over or dismissed? |
 
