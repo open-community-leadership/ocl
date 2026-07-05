@@ -96,7 +96,7 @@ To be updated soon
 | **Community Leader** | Complete all 8 modules |
 | **Community Mentor** | Complete modules and help another person or community use at least one |
 
-→ [Full badge details](resources/badges.md) -->
+→ [Full badge details](resources/badges/badges.md) -->
 
 ---
 
@@ -109,7 +109,7 @@ Browse all facilitated workshops, participant materials, and facilitator guides.
 ## Templates and tools
 Browse all canvases, worksheets, completion logs, and reusable community tools.
 
-- [Community Experience Canvas](resources/templates/community-experience-canvas.md)
+- [Community Experience Canvas](resources/templates/module-01/community-experience-canvas-all-contexts.md)
 - [Module Completion Log](resources/templates/module-completion-log.md)
 
 ---
@@ -120,7 +120,7 @@ New to OCL?
 
 Begin with **Workshop 1: The Experience Is the Community**, the introduction to the POPCOM framework.
 
-→ [Workshop 1 materials](workshops/experience-is-the-community/)
+→ [Workshop 1 materials](modules/01-experience-is-the-community/workshop.md)
 
 ## Contributing
 

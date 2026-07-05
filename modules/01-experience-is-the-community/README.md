@@ -112,9 +112,9 @@ This module is CC BY 4.0. You can run it in your community, your meetup, your wo
 
 This module works three ways. They cover the same arc — set the thesis, map your community, find what's missing, commit to one change — but how you do it depends on why you're here.
 
-- **[Self-guided](modules/01-experience-is-the-community/self-guided.md)** — working on your own, at your own pace. ~30–45 min.
-- **[Attend a workshop](modules/01-experience-is-the-community/workshop.md)** — join a live session someone runs.
-- **[The Pathmaker's Guide](modules/01-experience-is-the-community/mentor-guide.md)** — guiding another person or a small cohort. Flexible.
+- **[Self-guided](self-guided.md)** — working on your own, at your own pace. ~30–45 min.
+- **[Attend a workshop](workshop.md)** — join a live session someone runs.
+- **[The Pathmaker's Guide](mentor-guide.md)** — guiding another person or a small cohort. Flexible.
 
 Each path is designed to stand on its own.
 

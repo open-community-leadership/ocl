@@ -6,9 +6,9 @@
 
 Use this guide when supporting one community leader, a small cohort, or a full workshop group through the module. Adapt the pacing and activities to the number of people and the time available.
 
-Start with the [module overview](modules/01-experience-is-the-community/README.md) for the central idea and the [Community Experience Canvas](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf).
+Start with the [module overview](README.md) for the central idea and the [Community Experience Canvas](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf).
 
-For someone working independently, use the [self-guided version](modules/01-experience-is-the-community/self-guided.md). For the complete workshop structure and activities, see the [workshop](modules/01-experience-is-the-community/workshop.md) plan.
+For someone working independently, use the [self-guided version](self-guided.md). For the complete workshop structure and activities, see the [workshop](workshop.md) plan.
 
 Attend the workshop before guiding others through it if you can. It is not a requirement, but you will guide it better once you have experienced the process yourself.
 
@@ -82,7 +82,7 @@ Ask: *what actually stopped giving you a reason to return?* The honest answer is
 
 Do not pressure them to produce a dramatic story. The useful answer may be small: nobody remembered them, they never found a role, or returning felt no different from attending for the first time.
 
-**2. The Community Experience Canvas** Hand them the [canvas](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) 
+**2. The Community Experience Canvas** Hand them the [canvas](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf) 
 
 Each stage includes prompts for in-person communities, repositories, and live online spaces. Ask them to use the prompts that match their context. 
 

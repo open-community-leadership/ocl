@@ -4,4 +4,4 @@
 
 ---
 
-For the full list of available workshops, see [workshops/](../../workshops/).
+For the full list of available workshops, see [modules/](../).
