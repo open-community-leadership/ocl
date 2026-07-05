@@ -1,85 +1,102 @@
-# Experience Is the Community
+# Module 1 — Experience is the Community
 
-## Purpose
-
-This module introduces the central idea of Open Community Leadership:
+*Open Community Leadership (OCL) · Introducing the POPCOM Framework*
 
 > The experience is the community.
 
-People do not stay only because a community has useful information. They stay because of what it feels like to be there.
+People don't stay only because a community has useful information. They stay because of what it feels like to be there. They leave for the same reason — they may say they got busy, but more often the community stopped giving them a reason to return.
 
-The same is true when people leave. They may say they got busy, but often the community experience stopped giving them a reason to return.
+This is the first module in OCL, where the POPCOM framework is introduced and where you use it to evaluate the current state of your community.
 
-## What you will learn
 
-- Why experience shapes community retention
-- How to identify stay factors and leave factors
-- How to map the experience of different community members
-- How to choose one improvement that makes the community easier to return to
+---
 
-## Key idea
+## Goal
 
-Schools teach knowledge. Companies teach process. Books teach concepts. 
+By the end of this module, you can **map your community's experience across its eight stages and name the one change that would most improve whether people stay.**
 
-Communities teach the human infrastructure: how people learn from people, trust people, disagree, repair, participate, and eventually lead.
+## Your intention
 
-## Activity 1: Stay / Leave Reflection
+Before you start, name your own: what do *you* want to get out of this module, for your community? Hold that alongside the goal above. One gives direction, the other gives it meaning.
 
-Individually, answer:
+---
 
-1. Think of a community you stayed in. Why did you stay?
-2. Think of a community you left. Why did you leave?
+## Where this fits in POPCOM
 
-Write one reason per sticky note or line.
+POPCOM is the framework underneath OCL — the lens running through every module. This module covers the foundation the rest sits on: the experience itself.
 
-As a group, cluster the answers into themes.
+As you work, you'll meet two POPCOM dimensions as named stages on the canvas: **Participation** and **Connection**. They show up so strongly in community life that they earned their own moment in the journey. That's not coincidence. POPCOM dimensions aren't abstract ideas; they're concrete moments in how someone experiences your community.
 
-Common stay themes:
+Future modules pick up the others. Mentorship is parked for a later module.
 
-- Felt welcomed
-- Made friends
-- Was trusted
-- Was useful
-- Was recognised
-- Was growing
+---
 
-Common leave themes:
+## What you'll learn
 
-- Felt ignored
-- Felt unsafe
-- Felt embarrassed
-- Felt excluded
-- Felt stuck
-- Felt burned out
+- Why experience shapes whether people stay or leave
+- How to map a member's full journey using the Community Experience Canvas
+- How to find the stage where your community is quietly losing people
+- How to design one concrete change that makes it easier to return
 
-## Activity 2: Experience Audit
+---
 
-Choose one community you are part of.
+## The canvas
 
-Answer:
+The core tool for this module is the **Community Experience Canvas** — a one-page map of the eight stages a person moves through inside a community: Arrival, Welcome, Participation, Connection, Recognition, Growth, Safety, Return.
 
-- What does a newcomer experience in the first 10 minutes?
-- What does a returning member experience in the first month?
-- What does a volunteer experience after helping three times?
-- What does an organiser experience when they are tired?
-- What does someone experience when they make a mistake?
+Grab it from [`templates/module-01`](resources/templates/module-01/OCL·WORKSHOP-1·Community-Experience-Canvas.pdf):
 
-## Action
+- [`Community-Experience-Canvas.pdf`](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
+- [`Community-Experience-Canvas-examples.pdf`](resources/examples/module-01/OCL · WORKSHOP 1 · Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
 
-Choose one experience to improve in the next month.
+Print at A3 for group work, A4 for solo.
 
-Use this format:
+---
 
-- Current experience:
-- Desired experience:
-- First practical action:
-- Who needs to be involved:
-- How we will know it improved:
+## Reflect
+
+Before you call it done:
+
+- What surprised you about your own community?
+- What's the one thing you're taking back?
+- Is what you're doing sustainable — for you, and for the people you lead?
+
+---
 
 ## Completion evidence
 
-To complete this module, share:
+However you do the module, you've completed it when you can share:
 
-- Your stay/leave themes
-- One completed experience audit
-- One planned or tested improvement
+1. Your stay / leave themes
+2. One completed Community Experience Canvas
+3. The single most important thing missing from your community's experience
+4. One planned or tested improvement
+
+A real-world improvement a month later is the strongest evidence of all — that's the moment the module stops being an exercise and becomes a change in your community.
+
+---
+
+## Teach this module
+
+This module is CC BY 4.0. You can run it in your community, your meetup, your workplace — no permission needed. Read the path that fits, adapt the timing, and share what you changed. Tag **#OpenCommunityLeadership** so the next facilitator can learn from your run.
+
+
+---
+
+## Pick your path
+
+This module works three ways. They cover the same arc — set the thesis, map your community, find what's missing, commit to one change — but how you do it depends on why you're here.
+
+- **[Self-guided](modules/01-experience-is-the-community/self-guided.md)** — working on your own, at your own pace. ~30–45 min.
+- **[Attend a workshop](modules/01-experience-is-the-community/workshop.md)** — join a live 90-min session someone runs.
+- **[Mentor someone](modules/01-experience-is-the-community/mentor-guide.md)** — guiding another person or a small cohort. Flexible.
+
+Jump to yours. Each path is complete on its own.
+
+---
+
+## License
+
+CC BY 4.0 — Open Community Leadership. Free to use, adapt, and share with attribution.
+
+OCL was started and is maintained by Georgi Ker.

@@ -1,10 +1,10 @@
 # Module 01 — Experience Is the Community: Mentor Guide
 
-*Guidance for mentors supporting participants through this module.*
+*Guidance for mentors (PathMakers) supporting participants through this module.*
 
 ---
 
-## Your role
+## Your role as a PathMaker
 
 You are not here to lecture. You are here to help the participant notice what is already happening in their community and turn that into practical action.
 
