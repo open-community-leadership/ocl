@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { renderDocSplit, listResourceSections } from '../lib/content.js';
 const { html, attributionHtml } = renderDocSplit('resources/README.md');
-const sections = listResourceSections();
+const sections = listResourceSections().filter((section) => section.slug !== 'passport');
 ---
 <Base title="Resources">
   <article class="prose" set:html={html} />
