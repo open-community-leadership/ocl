@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDoc } from '../lib/content.js';
+const html = renderDoc('POPCOM.md');
+---
+<Base title="The POPCOM framework">
+  <article class="prose" set:html={html} />
+</Base>

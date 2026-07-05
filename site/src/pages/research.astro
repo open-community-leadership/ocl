@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDocSplit, listInterviews } from '../lib/content.js';
+const { html, attributionHtml } = renderDocSplit('research/README.md');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const interviews = listInterviews();
+---
+<Base title="Research">
+  <article class="prose" set:html={html} />
+  <div class="prose">
+    <h2>Interviews</h2>
+    {interviews.length > 0 ? (
+      <ul>
+        {interviews.map((interview) => (
+          <li><a href={`${base}/research/interviews/${interview.slug}/`}>{interview.title}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p><em>No interviews yet.</em></p>
+    )}
+  </div>
+  {attributionHtml && <div class="prose" set:html={attributionHtml} />}
+</Base>

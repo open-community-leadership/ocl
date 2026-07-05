@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import { listModules } from '../../lib/content.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const mods = listModules();
+---
+<Base title="Modules">
+  <article class="prose">
+    <h1>Modules</h1>
+    <p>Each module stands on its own. Start anywhere; start with 01 if unsure.</p>
+    <ul>
+      {mods.map((m) => (
+        <li><a href={`${base}/modules/${m.slug}/`}>{m.title}</a></li>
+      ))}
+    </ul>
+  </article>
+</Base>

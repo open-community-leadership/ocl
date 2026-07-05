@@ -1,0 +1,58 @@
+---
+import '@fontsource/lora/400.css';
+import '@fontsource/lora/400-italic.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = Astro.url.pathname;
+const nav = [
+  { href: `${base}/popcom/`, label: 'POPCOM' },
+  { href: `${base}/modules/`, label: 'Modules' },
+  { href: `${base}/mentor-guide/`, label: 'Mentor guide' },
+  { href: `${base}/resources/`, label: 'Resources' },
+  { href: `${base}/research/`, label: 'Research' },
+  { href: `${base}/contributing/`, label: 'Contributing' },
+  { href: `${base}/badges/`, label: 'Badge claim' },
+  { href: 'https://github.com/open-community-leadership/ocl', label: 'GitHub' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Open Community Leadership</title>
+    <meta name="description" content={description ?? 'Practical tools and a shared language for building communities people want to return to.'} />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+  </head>
+  <body>
+    <div class="frame">
+      <header class="masthead">
+        <a class="wordmark" href={`${base}/`}>Open Community Leadership</a>
+        <nav class="label" aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="colophon">
+        <div>
+          <span class="label">License:</span>
+          <span class="note"><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> — use it, adapt it, share it</span>
+        </div>
+        <div>
+          <span class="label">Repo:</span>
+          <a class="repo" href="https://github.com/open-community-leadership/ocl">open-community-leadership/ocl</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
