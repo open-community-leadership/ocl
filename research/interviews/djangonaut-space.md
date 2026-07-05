@@ -130,6 +130,8 @@ Not the curriculum. Not the structure. Not the certificates. The feeling of bein
 
 Notes from a research call conducted with the Djangonaut Space founding team in July 2026. Synthesised for inclusion in the OCL research library. Views are attributed to the programme collectively.
 
+For more information about how Djangonaut Space works, visit : **https://github.com/djangonaut-space/program/tree/main**
+
 Programme: [djangonaut.space](https://djangonaut.space)  
 Licence: Released under [CC BY 4.0](../../LICENSE.md) as part of the Open Community Leadership project.  
 Attribution: OCL was started and is maintained by Georgi Ker in 2026.

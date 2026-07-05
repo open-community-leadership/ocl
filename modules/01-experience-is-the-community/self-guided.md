@@ -4,7 +4,7 @@
 
 Working through this alone, at your own pace. Set aside 30–45 minutes, a community you care about, and somewhere to write.
 
-New here? Start with the [module overview](modules/01-experience-is-the-community/README.md) for the thesis and the canvas. Then come back and work the four steps below.
+New here? Start with the [module overview](README.md) for the thesis and the canvas. Then come back and work the four steps below.
 
 > The experience is the community.
 
@@ -24,7 +24,7 @@ That's all you need to start. The rest you'll feel as you go.
 
 ## What you need
 
-- The [Community Experience Canvas](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) — one page, all contexts. Each stage carries a prompt for in-person, repo, and online communities; read the line for yours.
+- The [Community Experience Canvas](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf) — one page, all contexts. Each stage carries a prompt for in-person, repo, and online communities; read the line for yours.
 - Somewhere to write — a notebook, a doc, or the printed canvas itself.
 
 ---
@@ -90,8 +90,8 @@ Want to share your completion, or compare notes with others doing the module? Ta
 
 ## Want to go further?
 
-- Join a group session: [the workshop](modules/01-experience-is-the-community/workshop.md).
-- Guide someone else through it: [Mentor someone](modules/01-experience-is-the-community/mentor-guide.md).
+- Join a group session: [the workshop](workshop.md).
+- Guide someone else through it: [Mentor someone](mentor-guide.md).
 
 ---
 

@@ -52,8 +52,8 @@ The canvas works across different kinds of community spaces. Each stage includes
 
 ### Resources
 
-- [`Community-Experience-Canvas.pdf`](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
-- [`Community-Experience-Canvas-examples.pdf`](resources/examples/module-01/OCL · WORKSHOP 1 · Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
+- [`Community-Experience-Canvas.pdf`](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
+- [`Community-Experience-Canvas-examples.pdf`](../../resources/examples/module-01/OCL%20%C2%B7%20WORKSHOP%201%20%C2%B7%20Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
 
 Print the canvas at A3 for group work or A4 for individual use.
 ---
@@ -112,9 +112,9 @@ This module is CC BY 4.0. You can run it in your community, your meetup, your wo
 
 This module works three ways. They cover the same arc — set the thesis, map your community, find what's missing, commit to one change — but how you do it depends on why you're here.
 
-- **[Self-guided](modules/01-experience-is-the-community/self-guided.md)** — working on your own, at your own pace. ~30–45 min.
-- **[Attend a workshop](modules/01-experience-is-the-community/workshop.md)** — join a live session someone runs.
-- **[The Pathmaker's Guide](modules/01-experience-is-the-community/mentor-guide.md)** — guiding another person or a small cohort. Flexible.
+- **[Self-guided](self-guided.md)** — working on your own, at your own pace. ~30–45 min.
+- **[Attend a workshop](workshop.md)** — join a live session someone runs.
+- **[The Pathmaker's Guide](mentor-guide.md)** — guiding another person or a small cohort. Flexible.
 
 Each path is designed to stand on its own.
 

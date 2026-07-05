@@ -29,7 +29,7 @@ That's why OCL is built on it: most community advice is about tools and platform
 
 This module is the entry point. You'll meet two POPCOM dimensions as stages on the canvas — Participation and Connection — because they're that central to how a community feels.
 
-Want the full framework? → [POPCOM overview](POPCOM.md)
+Want the full framework? → [POPCOM overview](../../POPCOM.md)
 
 ---
 
@@ -53,7 +53,7 @@ The room is deliberately mixed. You'll learn the most from the people whose comm
 - Something to write with (pen or laptop).
 - 90 minutes of attention. Phones down if you can — the exercises depend on being present with the people at your table.
 
-If you want to look at your community before you arrive, skim the [Community Experience Canvas](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf). You don't need to fill it in. Just knowing the eight stages exist will let you land faster on the day.
+If you want to look at your community before you arrive, skim the [Community Experience Canvas](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf). You don't need to fill it in. Just knowing the eight stages exist will let you land faster on the day.
 
 ---
 
@@ -98,8 +98,8 @@ Then put the work into practice by testing the one change you chose during the w
 You can also:
 
 - **Apply what you learned** — test the one change you chose and record what happened.
-- **Revisit the module independently** — use the [Self-guided](modules/01-experience-is-the-community/self-guided.md) path and work at your own pace.
-- **Become a Pathmaker** — [Mentor someone](modules/01-experience-is-the-community/mentor-guide.md). use the Pathmaker Guide to support another community leader through the module.
+- **Revisit the module independently** — use the [Self-guided](self-guided.md) path and work at your own pace.
+- **Become a Pathmaker** — [Mentor someone](mentor-guide.md). use the Pathmaker Guide to support another community leader through the module.
 
 Supporting others through the module contributes towards earning the **Lead Pathmaker** badge.
 Share what you tested and what you learned using **#OpenCommunityLeadership**.
