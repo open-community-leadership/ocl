@@ -28,12 +28,44 @@ const popcom = [
     </div>
   </section>
 
+  <section class="gives-section">
+    <h2>What OCL gives you</h2>
+    <div class="gives">
+      <div class="gives-item">
+        <h3>A framework</h3>
+        <p>POPCOM gives you a shared language for community health.</p>
+      </div>
+      <div class="gives-item">
+        <h3>A module path</h3>
+        <p>Each module turns one part of community leadership into practice.</p>
+      </div>
+      <div class="gives-item">
+        <h3>A resource library</h3>
+        <p>Canvases, checklists, examples, badges, and guides you can reuse.</p>
+      </div>
+      <div class="gives-item">
+        <h3>A way to pass it on</h3>
+        <p>Take what helps, change what does not fit, and pass on what you learn.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="spec">
-    <div class="spec-label"><span class="label">Start here:</span></div>
+    <div class="spec-label"><span class="label">The framework:</span></div>
     <div class="spec-body">
-      <h3>The Experience Is the Community</h3>
-      <p>The first OCL module helps you map how people actually move through your community, from arrival to return. Use it alone, in a workshop, or as a mentor guiding others.</p>
-      <a class="cta" href={`${base}/modules/01-experience-is-the-community/`}>Go to module one</a>
+      <h3>POPCOM is the lens running through every OCL module.</h3>
+      <p>It helps community leaders see where people enter, where they get stuck, and where future leaders begin to grow.</p>
+      <table class="popcom">
+        <tbody>
+          {popcom.map(([letter, dim, desc]) => (
+            <tr>
+              <td class="letter">{letter}</td>
+              <td class="dim">{dim}</td>
+              <td class="desc">{desc}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -64,43 +96,11 @@ const popcom = [
   </section>
 
   <section class="spec">
-    <div class="spec-label"><span class="label">The framework:</span></div>
+    <div class="spec-label"><span class="label">Start here:</span></div>
     <div class="spec-body">
-      <h3>POPCOM is the lens running through every OCL module.</h3>
-      <p>It helps community leaders see where people enter, where they get stuck, and where future leaders begin to grow.</p>
-      <table class="popcom">
-        <tbody>
-          {popcom.map(([letter, dim, desc]) => (
-            <tr>
-              <td class="letter">{letter}</td>
-              <td class="dim">{dim}</td>
-              <td class="desc">{desc}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="gives-section">
-    <h2>What OCL gives you</h2>
-    <div class="gives">
-      <div class="gives-item">
-        <h3>A framework</h3>
-        <p>POPCOM gives you a shared language for community health.</p>
-      </div>
-      <div class="gives-item">
-        <h3>A module path</h3>
-        <p>Each module turns one part of community leadership into practice.</p>
-      </div>
-      <div class="gives-item">
-        <h3>A resource library</h3>
-        <p>Canvases, checklists, examples, badges, and guides you can reuse.</p>
-      </div>
-      <div class="gives-item">
-        <h3>A way to pass it on</h3>
-        <p>Take what helps, change what does not fit, and pass on what you learn.</p>
-      </div>
+      <h3>The Experience Is the Community</h3>
+      <p>The first OCL module helps you map how people actually move through your community, from arrival to return. Use it alone, in a workshop, or as a mentor guiding others.</p>
+      <a class="cta" href={`${base}/modules/01-experience-is-the-community/`}>Go to module one</a>
     </div>
   </section>
 
