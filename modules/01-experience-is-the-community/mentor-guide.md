@@ -1,6 +1,6 @@
-# Module 01 — Experience Is the Community: PathMaker Guide
+# Module 01 — Experience Is the Community: Mentor Guide
 
-*Guidance for PathMakers supporting participants through this module.*
+*Guidance for Mentors supporting participants through this module.*
 
 *The Experience · Open Community Leadership*
 
@@ -12,7 +12,7 @@ For someone working independently, use the [self-guided version](self-guided.md)
 
 Attend the workshop before guiding others through it if you can. It is not a requirement, but you will guide it better once you have experienced the process yourself.
 
-Guiding this module also forms part of the pathway towards becoming a Lead Pathmaker.
+Guiding this module also forms part of the pathway towards becoming a Lead Mentor.
 
 ---
 
@@ -103,7 +103,7 @@ Ask questions such as:
 
 When the community leader identifies something missing, first ask them to describe what a better experience would look like.
 
-The change needs to belong to them. A solution supplied by the Pathmaker may sound sensible but still go nowhere.
+The change needs to belong to them. A solution supplied by the Mentor may sound sensible but still go nowhere.
 
 Ask what good would look like there first. The gap they choose to work on has to be theirs, or they won't follow through.
 
@@ -174,7 +174,7 @@ That's the moment the module stops being an exercise and becomes a change in the
 
 ---
 
-## Your progression as a Pathmaker
+## Your progression as a Mentor
 
 Supporting someone through the module is not only service. It is part of your own leadership development.
 
@@ -187,7 +187,7 @@ Record:
 - What you would change next time
 - The action they chose to test
 
-A Pathmaker who can guide this module consistently, reflect on their practice, and help other Pathmakers learn can progress by earning the **Lead Pathmaker** badge.
+A Mentor who can guide this module consistently, reflect on their practice, and help other Mentors learn can progress by earning the **Lead Mentor** badge.
 
 The aim is not simply to teach more sessions.
 

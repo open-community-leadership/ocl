@@ -125,8 +125,21 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .path:last-child { border-right: none; }
 .path h3 { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; margin: 0 0 0.3rem; }
 .path p { font-size: 0.85rem; color: var(--ink-muted); margin: 0; }
-.path a { text-decoration: none; }
-.path a:hover h3 { text-decoration: underline; }
+.path a { text-decoration: none; display: block; }
+.path { transition: background 0.15s ease, color 0.15s ease; }
+.path:hover { background: #1a1a1a; }
+.path:hover h3 { color: #fff; }
+.path:hover p { color: #aaa; }
+
+/* Gives */
+.gives-section { border-bottom: 1px solid var(--rule); padding: 2rem 2rem 0; }
+.gives-section h2 { font-family: var(--sans); font-size: 1.5rem; margin: 0 0 1.4rem; text-align: center; }
+.gives { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid var(--rule); }
+.gives-item { padding: 1.4rem 1.6rem; border-right: 0.5px solid var(--hairline); border-bottom: 0.5px solid var(--hairline); }
+.gives-item:nth-child(2n) { border-right: none; }
+.gives-item:nth-child(3), .gives-item:nth-child(4) { border-bottom: none; }
+.gives-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; margin: 0 0 0.3rem; }
+.gives-item p { font-size: 0.85rem; color: var(--ink-muted); margin: 0; }
 
 /* Prose (rendered markdown) */
 .prose { max-width: 66ch; padding: 3rem 2rem 4rem; }
