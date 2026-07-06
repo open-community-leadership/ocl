@@ -1,6 +1,6 @@
 # Badges
 
-Printable badge PDFs — one per module. Digital badges are issued and stored through Badgecraft.
+Claim a badge. Digital badges are issued and stored through Badgecraft.
 
 ---
 

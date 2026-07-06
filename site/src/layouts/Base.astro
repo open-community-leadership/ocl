@@ -9,14 +9,11 @@ const { title, description } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname;
 const nav = [
-  { href: `${base}/popcom/`, label: 'POPCOM' },
+  { href: `${base}/popcom/`, label: 'Framework' },
   { href: `${base}/modules/`, label: 'Modules' },
-  { href: `${base}/mentor-guide/`, label: 'Mentor guide' },
   { href: `${base}/resources/`, label: 'Resources' },
   { href: `${base}/research/`, label: 'Research' },
-  { href: `${base}/contributing/`, label: 'Contributing' },
-  { href: `${base}/badges/`, label: 'Badge claim' },
-  { href: 'https://github.com/open-community-leadership/ocl', label: 'GitHub' },
+  { href: `${base}/badges/`, label: 'Badges' },
 ];
 ---
 <!doctype html>
@@ -25,7 +22,7 @@ const nav = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Open Community Leadership</title>
-    <meta name="description" content={description ?? 'Practical tools and a shared language for building communities people want to return to.'} />
+    <meta name="description" content={description ?? 'Practical frameworks and tools for improving how people join, contribute, build relationships, and grow into future community leaders.'} />
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
   </head>
   <body>
