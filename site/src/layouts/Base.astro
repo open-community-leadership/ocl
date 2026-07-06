@@ -9,14 +9,11 @@ const { title, description } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname;
 const nav = [
-  { href: `${base}/popcom/`, label: 'POPCOM' },
+  { href: `${base}/popcom/`, label: 'Framework' },
   { href: `${base}/modules/`, label: 'Modules' },
-  { href: `${base}/mentor-guide/`, label: 'Mentor guide' },
   { href: `${base}/resources/`, label: 'Resources' },
   { href: `${base}/research/`, label: 'Research' },
-  { href: `${base}/contributing/`, label: 'Contributing' },
-  { href: `${base}/badges/`, label: 'Badge claim' },
-  { href: 'https://github.com/open-community-leadership/ocl', label: 'GitHub' },
+  { href: `${base}/badges/`, label: 'Badges' },
 ];
 ---
 <!doctype html>
