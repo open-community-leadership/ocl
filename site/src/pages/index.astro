@@ -16,7 +16,7 @@ const popcom = [
       <h1>Open Community Leadership</h1>
       <h2>Helping communities create future contributors and leaders</h2>
       <p>
-      Open Community Leadership (OCL) is an open-source project that captures the community knowledge usually held by people and turns it into practical frameworks, tools, and learning resources. Through POPCOM, it helps communities understand how people join, contribute, take responsibility, and grow into future leaders. 
+      Open Community Leadership (OCL) is an open-source project that turns community knowledge into practical frameworks, tools, and learning resources. Through POPCOM, it helps communities understand how people join, contribute, take responsibility, build relationships, and grow into future leaders. 
       </p>
       <div class="cta-row">
         <a class="cta solid" href={`${base}/popcom/`}>Explore the framework</a>
@@ -29,8 +29,45 @@ const popcom = [
   </section>
 
   <section class="spec">
+    <div class="spec-label"><span class="label">Start here:</span></div>
+    <div class="spec-body">
+      <h3>The Experience Is the Community</h3>
+      <p>The first OCL module helps you map how people actually move through your community, from arrival to return. Use it alone, in a workshop, or as a mentor guiding others.</p>
+      <a class="cta" href={`${base}/modules/01-experience-is-the-community/`}>Go to module one</a>
+    </div>
+  </section>
+
+  <section class="spec">
+    <div class="spec-label"><span class="label">The paths:</span></div>
+    <div class="spec-body" style="padding: 0;">
+      <div class="paths">
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Self-guided</h3>
+            <p>Work through the modules at your own pace.</p>
+          </a>
+        </div>
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Workshop</h3>
+            <p>Run a facilitated session with your team.</p>
+          </a>
+        </div>
+        <div class="path">
+          <a href={`${base}/modules/`}>
+            <h3>Mentor</h3>
+            <p>Support others as they grow into leadership.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec">
     <div class="spec-label"><span class="label">The framework:</span></div>
     <div class="spec-body">
+      <h3>POPCOM is the lens running through every OCL module.</h3>
+      <p>It helps community leaders see where people enter, where they get stuck, and where future leaders begin to grow.</p>
       <table class="popcom">
         <tbody>
           {popcom.map(([letter, dim, desc]) => (
@@ -45,29 +82,43 @@ const popcom = [
     </div>
   </section>
 
-  <section class="spec">
-    <div class="spec-label"><span class="label">The paths:</span></div>
-    <div class="spec-body" style="padding: 0;">
-      <div class="paths">
-        <div class="path">
-          <a href={`${base}/modules/`}>
-            <h3>Self-guided</h3>
-            <p>Work through the modules at your own pace</p>
-          </a>
-        </div>
-        <div class="path">
-          <a href={`${base}/modules/`}>
-            <h3>Workshop</h3>
-            <p>Facilitated sessions with your organising team</p>
-          </a>
-        </div>
-        <div class="path">
-          <a href={`${base}/modules/`}>
-            <h3>Mentor</h3>
-            <p>Support others as they grow into leadership</p>
-          </a>
-        </div>
+  <section class="gives-section">
+    <h2>What OCL gives you</h2>
+    <div class="gives">
+      <div class="gives-item">
+        <h3>A framework</h3>
+        <p>POPCOM gives you a shared language for community health.</p>
       </div>
+      <div class="gives-item">
+        <h3>A module path</h3>
+        <p>Each module turns one part of community leadership into practice.</p>
+      </div>
+      <div class="gives-item">
+        <h3>A resource library</h3>
+        <p>Canvases, checklists, examples, badges, and guides you can reuse.</p>
+      </div>
+      <div class="gives-item">
+        <h3>A way to pass it on</h3>
+        <p>Run it, adapt it, teach it, and share what you learn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec">
+    <div class="spec-label"><span class="label">Resources:</span></div>
+    <div class="spec-body">
+      <h3>Available now</h3>
+      <ul>
+        <li>Community Experience Canvas</li>
+        <li>Canvas examples</li>
+      </ul>
+      <h3>Coming next</h3>
+      <ul>
+        <li>Module 1 badge</li>
+        <li>Checklists</li>
+        <li>Feedback forms</li>
+        <li>More modules…</li>
+      </ul>
     </div>
   </section>
 </Base>

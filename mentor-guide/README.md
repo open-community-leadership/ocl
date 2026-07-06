@@ -1,4 +1,4 @@
-# General Pathmaker Guide
+# General Mentor Guide
 
 ## Role of the mentor
 

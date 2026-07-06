@@ -99,9 +99,9 @@ You can also:
 
 - **Apply what you learned** — test the one change you chose and record what happened.
 - **Revisit the module independently** — use the [Self-guided](self-guided.md) path and work at your own pace.
-- **Become a Pathmaker** — [Mentor someone](mentor-guide.md). use the Pathmaker Guide to support another community leader through the module.
+- **Become a Mentor** — [Mentor someone](mentor-guide.md). use the Mentor Guide to support another community leader through the module.
 
-Supporting others through the module contributes towards earning the **Lead Pathmaker** badge.
+Supporting others through the module contributes towards earning the **Lead Mentor** badge.
 Share what you tested and what you learned using **#OpenCommunityLeadership**.
 
 ---

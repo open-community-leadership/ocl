@@ -109,7 +109,7 @@ Testing your improvement in a real community strengthens the evidence and gives 
 ---
 
 ## Teach this module
-Guiding this module and reflecting on your practice can contribute towards earning the Lead Pathmaker badge.
+Guiding this module and reflecting on your practice can contribute towards earning the Lead Mentor badge.
 
 This module is CC BY 4.0. You can run it in your community, your meetup, your workplace — no permission needed. Read the path that fits, adapt the timing, and share what you changed. Tag **#OpenCommunityLeadership** so the next facilitator can learn from your run.
 
@@ -121,7 +121,7 @@ This module works three ways. They cover the same arc — set the thesis, map yo
 
 - **[Self-guided](self-guided.md)** — working on your own, at your own pace. ~30–45 min.
 - **[Attend a workshop](workshop.md)** — join a live session someone runs.
-- **[The Pathmaker's Guide](mentor-guide.md)** — guiding another person or a small cohort. Flexible.
+- **[The Mentor's Guide](mentor-guide.md)** — guiding another person or a small cohort. Flexible.
 
 Each path is designed to stand on its own.
 
@@ -131,7 +131,7 @@ Each path is designed to stand on its own.
 
 If you test your improvement, run the module, or adapt it for another community, share what happened.
 
-Tag #OpenCommunityLeadership so other community leaders and Pathmakers can learn from your experience.
+Tag #OpenCommunityLeadership so other community leaders and Mentors can learn from your experience.
 
 ---
 
