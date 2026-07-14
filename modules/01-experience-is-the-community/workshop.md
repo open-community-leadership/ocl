@@ -104,7 +104,7 @@ You can also:
 Supporting others through the module contributes towards earning the **Lead Mentor** badge.
 Share what you tested and what you learned using **#OpenCommunityLeadership**.
 
-## Claim your badge
+## You have earned your Workshop badge
 
 To claim the **Module 01 — Workshop** badge:
 
@@ -112,6 +112,14 @@ To claim the **Module 01 — Workshop** badge:
 2. Select **Module 01 - Workshop - Experience is the Community**.
 3. Click **Get this badge** and log in or create a Badge Wallet account.
 4. Submit your evidence and send it for review.
+
+## You did it!
+
+You looked closely at your community, talked it through with others, and found one thing worth changing.
+
+Now it is time to test it and see what happens.
+
+Notice what improves, what does not, and what else you discover along the way.
 
 ---
 *Workshops can be taken in any order unless otherwise stated.*

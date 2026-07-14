@@ -94,14 +94,24 @@ Submit your completion evidence to earn the **Experience badge**.
 
 Want to share your completion, or compare notes with others doing the module? Tag **#OpenCommunityLeadership**.
 
-## Claim your badge
+## You have earned your Self-Guided badge!
 
 To claim the **Module 01 — Self-guided** badge:
 
-1. Go to the [OCL project on Badgecraft](https://awero.org/classes/94325).
+1. Go to the [OCL project on Awero](https://awero.org/classes/94325).
 2. Select **Module 01 - Self-guided - Experience is the Community**.
 3. Click **Get this badge** and log in or create a Badge Wallet account.
 4. Submit your evidence and send it for review.
+
+## You did it!
+
+You looked closely at your community and found one thing worth changing.
+
+Now test it.
+
+See what happens. Notice what improves, what does not, and what you learn along the way.
+
+The canvas is finished. When you are ready, explore the other modules and choose the one that fits what your community needs next.
 
 ---
 
