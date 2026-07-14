@@ -1,5 +1,5 @@
 # Completion
 
-How completion works in OCL — requirements, evidence, mentor verification, and privacy. Participant data is held in Badgecraft, not in this repository.
+Completion in OCL is recorded through badges. Each badge represents a module finished via a specific path — self-guided, workshop, or mentor.
 
-
+Evidence submission, mentor verification, and badge issuance are all handled through [Badgecraft](https://www.badgecraft.eu, (currently transitioning to the brand **Awero**)

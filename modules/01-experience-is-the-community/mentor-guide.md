@@ -193,5 +193,22 @@ The aim is not simply to teach more sessions.
 
 The aim is to help more community leaders see clearly, act deliberately, and eventually guide others.
 
+## You have earned your Mentor badge
+
+To claim the **Module 01 — Mentor** badge:
+
+1. Go to the [OCL project on Badgecraft](https://awero.org/classes/94326).
+2. Select **Module 01 - Mentor - Experience is the Community**.
+3. Click **Get this badge** and log in or create a Badge Wallet account.
+4. Submit your evidence and send it for review.
+
+## You did it
+
+You helped someone stop, look honestly at their community, and choose one real change to test.
+
+That is not a small thing.
+
+Your badge marks the module you guided. Your growth as a Mentor comes from what you carry into the next one.
+
 *CC BY 4.0 — Open Community Leadership. Free to use, adapt, and share with attribution.*
 
