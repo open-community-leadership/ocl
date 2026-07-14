@@ -23,11 +23,13 @@ New here? Start with the [module overview](README.md) for the thesis and the can
 
 ## First, 5 minutes on POPCOM
 
-Communities don't grow because people contribute. They grow because contributors help create the next contributors. POPCOM exists to make that repeatable — it names the dimensions of a community that produces its own future organisers, mentors, and leaders, instead of burning through the ones it has.
+Communities do not grow just because people contribute. They grow when contributors are supported to bring in, guide, and eventually lead others.
 
-That's why OCL is built on it: most community advice is about tools and platforms. POPCOM is about the human structure underneath — the things that actually decide whether someone stays, grows, and eventually leads.
+That is what POPCOM is for. It gives us a way to look at the parts of community life that help people move from newcomer to contributor, mentor, organiser, or leader, without exhausting the same small group of people year after year.
 
-This module is the entry point. You'll meet two POPCOM dimensions as stages on the canvas — Participation and Connection — because they're that central to how a community feels.
+OCL is built on POPCOM because most community advice starts with tools: which platform to use, how to manage events, where to host discussions. POPCOM starts underneath all of that. It looks at what makes someone feel welcome, useful, connected, and ready to take on more.
+
+This module is the starting point. On the canvas, you will meet two POPCOM dimensions directly: **Participation** and **Connection**. They have their own stages because they shape so much of what it feels like to be part of a community.
 
 Want the full framework? → [POPCOM overview](../../POPCOM.md)
 
@@ -61,11 +63,11 @@ If you want to look at your community before you arrive, skim the [Community Exp
 
 The workshop moves in five beats:
 
-1. **POPCOM intro (10 min)** — the framework and why it matters, in plain terms.
-2. **The thesis (5 min)** — *the experience is the community.* Set with a short reflection, no lecture.
-3. **Activity 1 — Stay / Leave (15 min)** — you write, for yourself, why you've stayed in communities and why you've left. Then your table clusters everyone's answers into themes. You might notice the same reasons repeat across the room.
-4. **Activity 2 — Map your community (25 min)** — using the Community Experience Canvas, you map your own community across its eight stages: Arrival, Welcome, Participation, Connection, Recognition, Growth, Safety, Return. Then you share what you found with your table.
-5. **Activity 3 — What's missing (25 min)** — speed-table style. You write the biggest problem your community faces right now that you would like to tackle, then in three 5-minute rounds you pair with someone from another table: two minutes to explain your problem, two for them to suggest a solution, then swap. Musical-chairs switch, new partner, next round. Three perspectives on your problem in fifteen minutes. Then you commit to the one suggestion you'll actually try in the next month.
+1. **POPCOM intro** — A plain-language introduction to the framework behind OCL.
+2. **The main idea** — *the experience is the community.* Why the experience is the community, and why people stay or leave because of what it feels like to be there.
+3. **Activity 1 — Stay / Leave** — You reflect on communities you have stayed in and communities you have left, then compare patterns with your table.
+4. **Activity 2 — Map your community** — using the Community Experience Canvas, you map your own community across its eight stages: Arrival, Welcome, Participation, Connection, Recognition, Growth, Safety, Return. Then you share what you found with your table.
+5. **Activity 3 — What's missing** — speed-table style. You choose the biggest problem your community faces right now that you would like to tackle, then in three 5-minute rounds you pair with someone to explain your problem and for them to suggest a solution, then swap. Musical-chairs switch, new partner, next round. Three perspectives on your problem in fifteen minutes. Then you commit to the one suggestion you'll actually try in the next month.
 
 Close with 10 minutes of reflection, a quick QR feedback form, and a take-home reminder.
 
