@@ -104,6 +104,15 @@ You can also:
 Supporting others through the module contributes towards earning the **Lead Mentor** badge.
 Share what you tested and what you learned using **#OpenCommunityLeadership**.
 
+## Claim your badge
+
+To claim the **Module 01 — Workshop** badge:
+
+1. Go to the [OCL project on Badgecraft](https://awero.org/classes/94307).
+2. Select **Module 01 - Workshop - Experience is the Community**.
+3. Click **Get this badge** and log in or create a Badge Wallet account.
+4. Submit your evidence and send it for review.
+
 ---
 *Workshops can be taken in any order unless otherwise stated.*
 *CC BY 4.0 — Open Community Leadership. Free to use, adapt, and share with attribution.*
