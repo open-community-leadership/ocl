@@ -1,0 +1,470 @@
+---
+// src/pages/feedback.astro
+//
+// Feedback form for OCL workshop attendees.
+// Deploys as a static page on GitHub Pages — form submission is handled
+// by a third-party endpoint. Pick one and swap FORM_ENDPOINT below:
+//
+//   Formspree   https://formspree.io           free tier: 50/month
+//   Web3Forms   https://web3forms.com          free with an access_key
+//   Formsubmit  https://formsubmit.co/{email}  no signup, uses your email
+//
+// If you use Web3Forms or Formsubmit, replace the _subject / _gotcha
+// hidden fields below with their equivalents (see their docs).
+//
+// If you have a shared Layout component, wrap <main> in it and drop
+// the extra <head> markup. This file assumes standalone use so it
+// works as-is when saved to src/pages/feedback.astro.
+
+const FORM_ENDPOINT = "https://formspree.io/f/xqerpqrz";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback — Open Community Leadership</title>
+    <meta name="description" content="Share feedback on an OCL workshop or module." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Feedback</h1>
+        <p class="lede">
+          What worked, what didn't, what you'd change. All of it goes back
+          into the framework. Only the workshop and rating are required.
+        </p>
+      </header>
+
+      <form action={FORM_ENDPOINT} method="POST">
+        <!-- Formspree helpers: subject line + honeypot -->
+        <input type="hidden" name="_subject" value="OCL feedback submission" />
+        <input
+          type="text"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off"
+          style="display:none"
+        />
+
+        <label class="field">
+          <span>Workshop or module <em>*</em></span>
+          <input
+            type="text"
+            name="workshop"
+            required
+            placeholder="e.g. EuroPython 2026 — Module 1"
+          />
+        </label>
+
+        <fieldset>
+          <legend>Learning path</legend>
+          <div class="radio-row">
+            <label class="inline">
+              <input type="radio" name="path" value="self-guided" />
+              <span>Self-guided</span>
+            </label>
+            <label class="inline">
+              <input type="radio" name="path" value="workshop" />
+              <span>Workshop</span>
+            </label>
+            <label class="inline">
+              <input type="radio" name="path" value="mentor" />
+              <span>Mentor</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Overall experience <em>*</em></legend>
+          <div class="rating">
+            <label>
+              <input type="radio" name="rating" value="1" required />
+              <span>1</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="2" />
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="3" />
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="4" />
+              <span>4</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="5" />
+              <span>5</span>
+            </label>
+          </div>
+          <p class="hint">1 = didn't land · 5 = would recommend</p>
+        </fieldset>
+
+        <label class="field">
+          <span>What worked?</span>
+          <textarea
+            name="worked"
+            rows="4"
+            placeholder="Moments, exercises, or ideas that landed."></textarea>
+        </label>
+
+        <label class="field">
+          <span>What could be better?</span>
+          <textarea
+            name="improve"
+            rows="4"
+            placeholder="Gaps, friction, or anything that felt off."></textarea>
+        </label>
+
+        <label class="field">
+          <span>Anything else?</span>
+          <textarea
+            name="other"
+            rows="3"
+            placeholder="Optional."></textarea>
+        </label>
+
+        <div class="two-up">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Optional" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Only if you want a reply"
+            />
+          </label>
+        </div>
+
+        <label class="inline consent">
+          <input type="checkbox" name="consent" value="yes" />
+          <span
+            >You can share my feedback anonymously in OCL research or case
+            studies (CC BY 4.0).</span
+          >
+        </label>
+
+        <button type="submit">Send feedback</button>
+      </form>
+
+      <footer>
+        <p>
+          Open Community Leadership ·
+          <a href="https://github.com/open-community-leadership/ocl"
+            >Source on GitHub</a
+          > · CC BY 4.0
+        </p>
+      </footer>
+    </main>
+
+    <style>
+      :root {
+        --cream: #e9e6db;
+        --charcoal: #36352e;
+        --amber: #dcab2a;
+        --olive: #7a7b4a;
+        --mauve: #8e6e7b;
+        --warm-grey: #7c7a73;
+        --hairline: rgba(54, 53, 46, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--cream);
+        color: var(--charcoal);
+        font-family: "Lora", Georgia, serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 5rem;
+      }
+
+      header {
+        margin-bottom: 2.5rem;
+      }
+
+      h1 {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        line-height: 1.1;
+        margin: 0 0 0.8rem;
+        letter-spacing: -0.01em;
+      }
+
+      .lede {
+        margin: 0;
+        font-size: 1.05rem;
+        color: var(--charcoal);
+        opacity: 0.85;
+        max-width: 34em;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .field > span,
+      legend {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--charcoal);
+      }
+
+      .field > span em,
+      legend em {
+        font-style: normal;
+        color: var(--olive);
+        margin-left: 0.15em;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        font-family: "Lora", serif;
+        font-size: 1rem;
+        padding: 0.75rem 0.9rem;
+        border: 1px solid var(--charcoal);
+        background: transparent;
+        color: var(--charcoal);
+        border-radius: 2px;
+        width: 100%;
+        transition: border-color 0.15s;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: var(--warm-grey);
+        opacity: 0.8;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--amber);
+        box-shadow: 0 0 0 3px rgba(220, 171, 42, 0.25);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 90px;
+        line-height: 1.5;
+      }
+
+      fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      legend {
+        padding: 0;
+        margin-bottom: 0.35rem;
+      }
+
+      .hint {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.72rem;
+        color: var(--warm-grey);
+        margin: 0.4rem 0 0;
+        letter-spacing: 0.02em;
+      }
+
+      .radio-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem 1.25rem;
+      }
+
+      label.inline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.55rem;
+        cursor: pointer;
+      }
+
+      label.inline span {
+        font-family: "Lora", serif;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--charcoal);
+      }
+
+      label.inline input[type="radio"],
+      label.inline input[type="checkbox"] {
+        accent-color: var(--amber);
+        width: 1.05rem;
+        height: 1.05rem;
+      }
+
+      .rating {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .rating label {
+        flex: 1;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .rating input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .rating span {
+        display: block;
+        text-align: center;
+        padding: 0.75rem 0;
+        border: 1px solid var(--charcoal);
+        border-radius: 2px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition:
+          background 0.15s,
+          color 0.15s,
+          border-color 0.15s;
+      }
+
+      .rating label:hover span {
+        background: rgba(220, 171, 42, 0.15);
+      }
+
+      .rating input:checked + span {
+        background: var(--amber);
+        border-color: var(--amber);
+        color: var(--charcoal);
+      }
+
+      .rating input:focus-visible + span {
+        box-shadow: 0 0 0 3px rgba(220, 171, 42, 0.35);
+      }
+
+      .two-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        .two-up {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .consent {
+        margin-top: 0.25rem;
+        align-items: flex-start;
+      }
+
+      .consent input[type="checkbox"] {
+        margin-top: 0.3rem;
+      }
+
+      .consent span {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+
+      button[type="submit"] {
+        align-self: flex-start;
+        margin-top: 0.75rem;
+        padding: 0.9rem 1.75rem;
+        background: var(--charcoal);
+        color: var(--cream);
+        border: none;
+        border-radius: 2px;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition:
+          background 0.15s,
+          color 0.15s;
+      }
+
+      button[type="submit"]:hover {
+        background: var(--amber);
+        color: var(--charcoal);
+      }
+
+      button[type="submit"]:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(220, 171, 42, 0.4);
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--hairline);
+        font-family: "Poppins", sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.03em;
+        color: var(--warm-grey);
+      }
+
+      footer a {
+        color: var(--charcoal);
+        text-decoration: underline;
+        text-decoration-color: var(--amber);
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 3px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </body>
+</html>
