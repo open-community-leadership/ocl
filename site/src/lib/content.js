@@ -124,6 +124,21 @@ export function renderModuleDoc(slug, doc) {
   return { slug, title, html: renderMarkdown(raw, `modules/${slug}`) };
 }
 
+const NEW_DAYS = 30;
+
+function parseFrontmatterDate(raw) {
+  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm) return null;
+  const m = fm[1].match(/^date:\s*(\d{4}-\d{2}-\d{2})/m);
+  return m ? new Date(m[1]) : null;
+}
+
+export function isNew(raw) {
+  const date = parseFrontmatterDate(raw);
+  if (!date) return false;
+  return (Date.now() - date.getTime()) / 86400000 <= NEW_DAYS;
+}
+
 function readDocMeta(readmePath, fallbackName) {
   if (!fs.existsSync(readmePath)) return { title: fallbackName, description: '' };
   const raw = fs.readFileSync(readmePath, 'utf-8');
@@ -162,11 +177,23 @@ export function listResourceSections() {
     .map((d) => {
       const sectionRel = `resources/${d.name}`;
       const { title, description } = readDocMeta(path.join(dir, d.name, 'README.md'), d.name);
-      const files = walkFiles(sectionRel).map((relPath) => ({
-        relPath,
-        name: path.posix.relative(sectionRel, relPath),
-        href: resourceHref(relPath),
-      }));
+      const files = walkFiles(sectionRel).map((relPath) => {
+        const abs = path.join(repoRoot, relPath);
+        let fileIsNew = false;
+        if (relPath.endsWith('.md')) {
+          const raw = fs.readFileSync(abs, 'utf-8');
+          fileIsNew = isNew(raw);
+        } else {
+          const mtime = fs.statSync(abs).mtimeMs;
+          fileIsNew = (Date.now() - mtime) / 86400000 <= NEW_DAYS;
+        }
+        return {
+          relPath,
+          name: path.posix.relative(sectionRel, relPath),
+          href: resourceHref(relPath),
+          isNew: fileIsNew,
+        };
+      });
       return { slug: d.name, title, description, files };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
@@ -184,6 +211,38 @@ export function listInterviews() {
       return { slug, title };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+export function listNewItems() {
+  const items = [];
+
+  // Research interviews
+  const interviewDir = path.join(repoRoot, 'research', 'interviews');
+  for (const d of fs.readdirSync(interviewDir, { withFileTypes: true })) {
+    if (!d.isFile() || !d.name.endsWith('.md') || d.name === 'README.md') continue;
+    const raw = fs.readFileSync(path.join(interviewDir, d.name), 'utf-8');
+    if (!isNew(raw)) continue;
+    const slug = d.name.replace(/\.md$/, '');
+    const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? slug;
+    const date = parseFrontmatterDate(raw);
+    items.push({ title, href: `${base}/research/interviews/${slug}/`, date });
+  }
+
+  // Resource files
+  const resourceDir = path.join(repoRoot, 'resources');
+  for (const section of fs.readdirSync(resourceDir, { withFileTypes: true })) {
+    if (!section.isDirectory()) continue;
+    for (const relPath of walkFiles(`resources/${section.name}`)) {
+      if (!relPath.endsWith('.md')) continue;
+      const raw = fs.readFileSync(path.join(repoRoot, relPath), 'utf-8');
+      if (!isNew(raw)) continue;
+      const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? path.posix.basename(relPath, '.md');
+      const date = parseFrontmatterDate(raw);
+      items.push({ title, href: resourceHref(relPath), date });
+    }
+  }
+
+  return items.sort((a, b) => b.date - a.date);
 }
 
 export function renderInterview(slug) {

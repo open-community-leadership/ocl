@@ -19,7 +19,7 @@ const sections = listResourceSections().filter((section) => section.slug !== 'pa
         ) : section.files.length > 0 ? (
           <ul>
             {section.files.map((file) => (
-              <li><a href={file.href}>{file.name}</a></li>
+              <li><a href={file.href}>{file.name}</a>{file.isNew && <span class="tag-new">New</span>}</li>
             ))}
           </ul>
         ) : (

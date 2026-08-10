@@ -131,6 +131,22 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .path:hover h3 { color: #fff; }
 .path:hover p { color: #aaa; }
 
+/* New tag */
+.tag-new {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.15em 0.5em;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin-left: 0.4em;
+}
+
 /* Gives */
 .gives-section { border-bottom: 1px solid var(--rule); padding: 2rem 2rem 0; }
 .gives-section h2 { font-family: var(--sans); font-size: 1.5rem; margin: 0 0 1.4rem; text-align: center; }
