@@ -16,6 +16,10 @@ const sections = listResourceSections().filter((section) => section.slug !== 'pa
           <ul>
             <li><a href={`${base}/badges/`}>OCL Badges — how to earn and claim</a></li>
           </ul>
+        ) : section.slug === 'feedback' ? (
+          <ul>
+            <li><a href={`${base}/feedback/`}>Workshop feedback form</a></li>
+          </ul>
         ) : section.files.length > 0 ? (
           <ul>
             {section.files.map((file) => (

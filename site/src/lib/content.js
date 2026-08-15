@@ -47,6 +47,10 @@ function resolveContentLink(href, fromDir) {
     return withHash(`${base}/contributing/`);
   }
 
+  if (resolved === 'resources/feedback' || resolved === 'resources/feedback/README.md') {
+    return withHash(`${base}/feedback/`);
+  }
+
   if (resolved === 'research' || resolved === 'research/README.md') {
     return withHash(`${base}/research/`);
   }

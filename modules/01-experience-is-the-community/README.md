@@ -59,6 +59,7 @@ The canvas works across different kinds of community spaces. Each stage includes
 ### Resources
 
 - [`Community-Experience-Canvas.pdf`](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf) — the canvas. One page covers all contexts: each stage carries a prompt for in-person, repo, and online communities. Read the line for your kind of community.
+- [`Community-Experience-ES-Canvas.pdf`](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-ES-Canvas.pdf) — the canvas in Spanish.
 - [`Community-Experience-Canvas-examples.pdf`](../../resources/examples/module-01/OCL%20%C2%B7%20WORKSHOP%201%20%C2%B7%20Community-Experience-Canvas-examples.pdf) — a filled example (PyBridge Rotterdam, a fictional Python meetup) showing what done looks like.
 
 Print the canvas at A3 for group work or A4 for individual use. This canvas is essential for this module.
