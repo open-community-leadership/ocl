@@ -8,6 +8,8 @@ Use this guide when supporting one community leader, a small cohort, or a full w
 
 Start with the [module overview](README.md) for the central idea and the [Community Experience Canvas](../../resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf).
 
+Presentation slides are available to help you walk a group through the framework: [English](../../resources/templates/module-01/module-1-experience-workshop-slide.pdf) or [Spanish captions](../../resources/templates/module-01/module-1-experience-workshop-slide-ES.pdf).
+
 For someone working independently, use the [self-guided version](self-guided.md). For the complete workshop structure and activities, see the [workshop](workshop.md) plan.
 
 Attend the workshop before guiding others through it if you can. It is not a requirement, but you will guide it better once you have experienced the process yourself.
