@@ -85,9 +85,16 @@ function renderMarkdown(raw, fromDir) {
   return new Marked({ renderer: renderer(fromDir) }).parse(raw);
 }
 
+// Docs may open with a `---\nkey: value\n---` frontmatter block (e.g. `date:`
+// for the "recently added" tracking below). It's metadata, not content, so it
+// never gets to marked — otherwise it renders as a literal hr + paragraph.
+function stripFrontmatter(raw) {
+  return raw.replace(/^---\n[\s\S]*?\n---\n?/, '');
+}
+
 export function renderDoc(relPath) {
   const raw = fs.readFileSync(path.join(repoRoot, relPath), 'utf-8');
-  return renderMarkdown(raw, path.posix.dirname(relPath));
+  return renderMarkdown(stripFrontmatter(raw), path.posix.dirname(relPath));
 }
 
 // Folder READMEs end with a "*This folder is part of OCL...*" attribution
@@ -98,10 +105,11 @@ const ATTRIBUTION_RE = /\n\n---\n\n(\*This folder is part of[\s\S]*)$/;
 export function renderDocSplit(relPath) {
   const raw = fs.readFileSync(path.join(repoRoot, relPath), 'utf-8');
   const fromDir = path.posix.dirname(relPath);
-  const match = raw.match(ATTRIBUTION_RE);
-  if (!match) return { html: renderMarkdown(raw, fromDir), attributionHtml: '' };
+  const body = stripFrontmatter(raw);
+  const match = body.match(ATTRIBUTION_RE);
+  if (!match) return { html: renderMarkdown(body, fromDir), attributionHtml: '' };
   return {
-    html: renderMarkdown(raw.slice(0, match.index), fromDir),
+    html: renderMarkdown(body.slice(0, match.index), fromDir),
     attributionHtml: renderMarkdown(match[1], fromDir),
   };
 }
@@ -114,8 +122,9 @@ export function listModules() {
     .filter((d) => fs.existsSync(path.join(dir, d.name, 'README.md')))
     .map((d) => {
       const raw = fs.readFileSync(path.join(dir, d.name, 'README.md'), 'utf-8');
-      const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? d.name;
-      return { slug: d.name, title, html: renderMarkdown(raw, `modules/${d.name}`) };
+      const body = stripFrontmatter(raw);
+      const title = body.match(/^#\s+(.+)$/m)?.[1] ?? d.name;
+      return { slug: d.name, title, html: renderMarkdown(body, `modules/${d.name}`) };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }
@@ -124,8 +133,9 @@ export function renderModuleDoc(slug, doc) {
   const file = path.join(repoRoot, 'modules', slug, `${doc}.md`);
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, 'utf-8');
-  const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? doc;
-  return { slug, title, html: renderMarkdown(raw, `modules/${slug}`) };
+  const body = stripFrontmatter(raw);
+  const title = body.match(/^#\s+(.+)$/m)?.[1] ?? doc;
+  return { slug, title, html: renderMarkdown(body, `modules/${slug}`) };
 }
 
 const NEW_DAYS = 30;
@@ -266,8 +276,9 @@ export function renderInterview(slug) {
   const file = path.join(repoRoot, 'research', 'interviews', `${slug}.md`);
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, 'utf-8');
-  const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? slug;
-  return { slug, title, html: renderMarkdown(raw, 'research/interviews') };
+  const body = stripFrontmatter(raw);
+  const title = body.match(/^#\s+(.+)$/m)?.[1] ?? slug;
+  return { slug, title, html: renderMarkdown(body, 'research/interviews') };
 }
 
 // Each entry: { module: <module slug>, event, location, type ("self" | "workshop" | "mentor"), attendees, photos: [<path under resources/, e.g. "photos/europython-2026/1.jpg">] }

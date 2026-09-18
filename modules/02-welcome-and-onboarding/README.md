@@ -1,3 +1,7 @@
+---
+date: 2026-09-18
+---
+
 # Module 02 — Welcome and Onboarding for Volunteers
 
 **POPCOM dimensions: Participation · Connection**
