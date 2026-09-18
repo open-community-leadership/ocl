@@ -19,7 +19,7 @@ By the end of this module, you can **trace what a new volunteer actually experie
 
 ## Your intention
 
-Before you begin, decide what you want to gain from this module for your community.
+Before you begin, write down what you hope will be different for the next person who offers to help.
 
 Keep that intention alongside the module goal. The goal gives the work direction. Your intention gives it meaning.
 
@@ -30,7 +30,7 @@ Keep that intention alongside the module goal. The goal gives the work direction
 
 POPCOM is the framework underneath OCL, the lens running through every module: Participation, Ownership, Purpose, Connection, Opportunity, Mentorship.
 
-This module sits on **Participation** and **Connection**. A volunteer who offers and hears nothing has been denied both. They tried to participate and were not let in. They reached for a person and found a queue.
+This module sits on **Participation** and **Connection**. When a volunteer offers and hears nothing, both break down. They tried to participate and were not let in. They reached for a person and found a queue.
 
 Two ideas run through the whole module:
 
@@ -55,7 +55,7 @@ Two ideas run through the whole module:
 
 The core tool for this module is the **Volunteer Walk**: you pick the last person who offered to help and trace what happened to them, step by step, from the offer to whatever came after.
 
-Each step is marked **smooth**, **unclear**, or **missing**, and laid out on a grid across four phases: Offer, Reply, First task, After. Where the gaps cluster is where you start.
+Each step is marked **smooth**, **unclear**, or **missing**, with what actually happens and who currently owns it. It is laid out on a grid across four phases: Phase, step, Result, What actually happen, Who owns this?.  Where the gaps cluster is where you start.
 
 There are two versions. One for organisers, where the volunteer is helping at an event. One for maintainers, where the volunteer is a first-time contributor.
 
@@ -75,6 +75,7 @@ Before you call it done:
 - Which step in your grid had no owner?
 - What is the first task you would give the next volunteer, and does it exist yet?
 - Is the response time you're promising one you can actually keep?
+- What would happen if the person who usually welcomes volunteers wasn't there?
 
 ---
 
@@ -87,24 +88,21 @@ The module is complete when you can share:
 1. Your Volunteer Walk grid (smooth, unclear, missing, and what actually happens)
 2. The one gap you chose and why it fits your community
 3. Who owns the change
-4. What happened when you tested it with the next volunteer
+4. What happened when you tested it with the next volunteer, or, if you have not had another volunteer yet, how you will know whether the change worked when you do.
 
 A real volunteer who came back is the strongest evidence of all.
 
 ---
 
-## Earn the Onboard badge
+## Earn the Onboarding badge
+This module has three badge paths: 
+- Self-Guided, 
+- Workshop, 
+- and Mentor. 
 
-Complete the module and submit the required evidence to earn the Onboarding badge.
+Each recognises the same core understanding, demonstrated in a different way.  
 
-The badge recognises that you can:
-
-- trace a volunteer's experience honestly
-- find the step that has no owner
-- choose one change and assign it to someone
-- test it with a real person and say what happened
-
-The badge can be earned through the self-guided path or by attending a workshop.
+The Mentor badge recognises not only that you understand the module, but that you can guide someone else through it and reflect on what happened. Module Mentor badges can also contribute towards the wider Lead Mentor pathway.
 
 ---
 
