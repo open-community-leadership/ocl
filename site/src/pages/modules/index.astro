@@ -1,17 +1,34 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { listModules } from '../../lib/content.js';
+import { listModules, moduleAttendeeTotal } from '../../lib/content.js';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const mods = listModules();
+const mods = listModules().map((m) => ({ ...m, attendees: moduleAttendeeTotal(m.slug) }));
 ---
 <Base title="Modules">
   <article class="prose">
     <h1>Modules</h1>
     <p>Each module stands on its own. Start anywhere; start with 01 if unsure.</p>
-    <ul>
+    <ul class="module-list">
       {mods.map((m) => (
-        <li><a href={`${base}/modules/${m.slug}/`}>{m.title}</a></li>
+        <li>
+          <a href={`${base}/modules/${m.slug}/`}>{m.title}</a>
+          {m.attendees > 0 && (
+            <a class="attendee-count" href={`${base}/stats/#${m.slug}`}>{m.attendees} attended</a>
+          )}
+        </li>
       ))}
     </ul>
   </article>
 </Base>
+
+<style>
+  .module-list li { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .attendee-count {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--ink-muted);
+  }
+  .attendee-count:hover { color: var(--ink); border-bottom-color: var(--ink); }
+</style>

@@ -246,6 +246,19 @@ export function listNewItems() {
     }
   }
 
+  // Module READMEs
+  const moduleDir = path.join(repoRoot, 'modules');
+  for (const d of fs.readdirSync(moduleDir, { withFileTypes: true })) {
+    if (!d.isDirectory() || d.name.startsWith('_')) continue;
+    const readmePath = path.join(moduleDir, d.name, 'README.md');
+    if (!fs.existsSync(readmePath)) continue;
+    const raw = fs.readFileSync(readmePath, 'utf-8');
+    if (!isNew(raw)) continue;
+    const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? d.name;
+    const date = parseFrontmatterDate(raw);
+    items.push({ title, href: `${base}/modules/${d.name}/`, date });
+  }
+
   return items.sort((a, b) => b.date - a.date);
 }
 
@@ -255,4 +268,23 @@ export function renderInterview(slug) {
   const raw = fs.readFileSync(file, 'utf-8');
   const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? slug;
   return { slug, title, html: renderMarkdown(raw, 'research/interviews') };
+}
+
+// Each entry: { module: <module slug>, event, location, type ("self" | "workshop" | "mentor"), attendees, photos: [<path under resources/, e.g. "photos/europython-2026/1.jpg">] }
+export function listAttendance() {
+  const file = path.join(repoRoot, 'modules', 'attendance.json');
+  if (!fs.existsSync(file)) return [];
+  const entries = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  return entries.map((e) => ({
+    ...e,
+    photos: (e.photos ?? []).map((p) => `${base}/resources/${p}`),
+  }));
+}
+
+export function attendanceByModule(slug) {
+  return listAttendance().filter((e) => e.module === slug);
+}
+
+export function moduleAttendeeTotal(slug) {
+  return attendanceByModule(slug).reduce((sum, e) => sum + e.attendees, 0);
 }
