@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import { listModules, listAttendance } from '../lib/content.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const TYPE_LABEL = { self: 'Self-guided', workshop: 'Workshop', mentor: 'Mentor' };
+
+const mods = listModules();
+const attendance = listAttendance();
+const byModule = mods
+  .map((m) => ({ ...m, events: attendance.filter((e) => e.module === m.slug) }))
+  .filter((m) => m.events.length > 0);
+
+const totalAttendees = attendance.reduce((sum, e) => sum + e.attendees, 0);
+const totalEvents = attendance.length;
+---
+<Base title="Attendance" description="Workshop and event attendance across OCL modules.">
+  <article class="prose">
+    <h1>Attendance</h1>
+    <p>{totalAttendees} people across {totalEvents} event{totalEvents === 1 ? '' : 's'} so far.</p>
+
+    {byModule.map((m) => (
+      <section id={m.slug} class="module-section">
+        <h2><a href={`${base}/modules/${m.slug}/`}>{m.title}</a></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Location</th>
+              <th>Type</th>
+              <th>Attendees</th>
+            </tr>
+          </thead>
+          <tbody>
+            {m.events.map((e) => (
+              <tr>
+                <td>{e.event}</td>
+                <td>{e.location || '—'}</td>
+                <td>{TYPE_LABEL[e.type] ?? e.type}</td>
+                <td>{e.attendees}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {m.events.some((e) => e.photos.length > 0) && (
+          <div class="photo-grid">
+            {m.events.flatMap((e) => e.photos.map((src) => (
+              <img src={src} alt={`Photo from ${e.event}`} loading="lazy" />
+            )))}
+          </div>
+        )}
+      </section>
+    ))}
+  </article>
+</Base>
+
+<style>
+  .module-section { margin-top: 2.4rem; padding-top: 1.4rem; border-top: 0.5px solid var(--hairline); }
+  .module-section h2 { margin: 0 0 0.8rem; padding-top: 0; border-top: none; }
+  .module-section h2 a { text-decoration: none; }
+  .module-section h2 a:hover { text-decoration: underline; }
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 1rem; }
+  .photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
+</style>

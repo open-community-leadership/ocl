@@ -1,0 +1,18 @@
+[
+  {
+    "module": "01-experience-is-the-community",
+    "event": "EuroPython 2026",
+    "location": "Krakow, Poland",
+    "type": "workshop",
+    "attendees": 30,
+    "photos": []
+  },
+  {
+    "module": "01-experience-is-the-community",
+    "event": "PyLatam 2026",
+    "location": "Turrialba, Costa Rica",
+    "type": "workshop",
+    "attendees": 36,
+    "photos": []
+  }
+]
