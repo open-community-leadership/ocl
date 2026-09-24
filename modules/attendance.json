@@ -5,6 +5,7 @@
     "location": "Krakow, Poland",
     "type": "workshop",
     "attendees": 30,
+    "link": "https://programme.europython.eu/europython-2026/talk/LSNR3C/",
     "photos": []
   },
   {
@@ -13,6 +14,7 @@
     "location": "Turrialba, Costa Rica",
     "type": "workshop",
     "attendees": 36,
+    "link": "https://www.pylatam.org/agenda",
     "photos": []
   }
 ]

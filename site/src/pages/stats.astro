@@ -34,7 +34,7 @@ const totalEvents = attendance.length;
           <tbody>
             {m.events.map((e) => (
               <tr>
-                <td>{e.event}</td>
+                <td>{e.link ? <a href={e.link}>{e.event}</a> : e.event}</td>
                 <td>{e.location || '—'}</td>
                 <td>{TYPE_LABEL[e.type] ?? e.type}</td>
                 <td>{e.attendees}</td>
