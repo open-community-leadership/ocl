@@ -25,24 +25,26 @@ By the end of this module, you can **trace what a new volunteer actually experie
 
 ## Your intention
 
-Before you begin, write down what you hope will be different for the next person who offers to help.
+You're about to trace what happened to one specific person. Before you start, finish this sentence: the next person who raises their hand should walk away knowing ___.
 
-Keep that intention alongside the module goal. The goal gives the work direction. Your intention gives it meaning.
+You are not looking for a goal, but a reason. The grid tells you what's broken. This is how you start fixing it.
 
 ---
 
 
 ## Where this fits in POPCOM
-
-POPCOM is the framework underneath OCL, the lens running through every module: Participation, Ownership, Purpose, Connection, Opportunity, Mentorship.
-
 This module sits on **Participation** and **Connection**. When a volunteer offers and hears nothing, both break down. They tried to participate and were not let in. They reached for a person and found a queue.
+
+For more on the POPCOM framework, see the [POPCOM overview](../../POPCOM.md).
+
 
 Two ideas run through the whole module:
 
-**No owner, no onboarding.** If everybody is responsible for welcoming volunteers, very often nobody is. Every important transition needs an owner.
+1. **No owner, no onboarding.** Without someone specifically responsible, replying to a new volunteer becomes optional. It happens when someone happens to notice.
 
-**The problem is not latency. It is uncertainty.** A volunteer can wait a week if they know they are waiting. They cannot wait a day if they think they have been forgotten.
+
+2. **The problem is not latency. It is uncertainty.** A volunteer can wait a week if they know they are waiting. They cannot wait a day if they think they have been forgotten.
+
 
 ---
 
@@ -50,37 +52,38 @@ Two ideas run through the whole module:
 ## What you'll learn
 
 - Why volunteer onboarding is a design problem, not a personality problem
-- How to trace what a new volunteer actually experiences, not what you intended
+- How to trace what a new volunteer actually experiences, not what you assume happens
 - Concrete things organisers and maintainers do that turn an offer into a first task
-- Why the first mistake is an onboarding moment, and how to handle it
+- Why not knowing what to do next is an onboarding moment, and how to handle it
 - How to choose the one change that fits your community, and who owns it
-
 ---
 
 ## The Volunteer Walk
 
-The core tool for this module is the **Volunteer Walk**: you pick the last person who offered to help and trace what happened to them, step by step, from the offer to whatever came after.
+Trace what happened to the person you named, step by step, from the offer to whatever came after.
 
-Each step is marked **smooth**, **unclear**, or **missing**, with what actually happens and who currently owns it. It is laid out on a grid across four phases: Phase, step, Result, What actually happen, Who owns this?.  Where the gaps cluster is where you start.
+We walk the four steps in order: *Offer*, *Reply*, *First task*, *After*. A step with nobody standing on it is where the walk breaks.
+
+Each step gets marked **smooth**, **unclear**, or **missing**, with what actually happened and who currently owns it. 
+Laid out as a grid: Phase, step, Result, What actually happen, Who owns this? Where the gaps cluster is where you start.
 
 There are two versions. One for organisers, where the volunteer is helping at an event. One for maintainers, where the volunteer is a first-time contributor.
 
 ### Resources
 
-- `Volunteer-Walk-grid.pdf` — the grid, one page, with both the organiser and maintainer questions.
-- `Volunteer-Walk-examples.pdf` — two filled grids: a monthly meetup and a small Python library, showing what done looks like.
-
-
+- `Volunteer-Walk-grid-organiser.pdf` — the grid for event volunteers.
+- `Volunteer-Walk-grid-maintainer.pdf` — the grid for first-time contributors.
+- `Volunteer-Walk-example-organiser.pdf` — a filled grid: a monthly meetup.
+- `Volunteer-Walk-example-maintainer.pdf` — a filled grid: a small Python library.
 ---
 
 ## Reflect
 
 Before you call it done:
 
-- Who caught the last offer of help in your community? Or did nobody?
 - Which step in your grid had no owner?
 - What is the first task you would give the next volunteer, and does it exist yet?
-- Is the response time you're promising one you can actually keep?
+- Is there a response time you'd actually be able to keep, even on a bad week?
 - What would happen if the person who usually welcomes volunteers wasn't there?
 
 ---
