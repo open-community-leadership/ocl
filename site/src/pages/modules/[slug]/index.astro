@@ -17,10 +17,37 @@ const subPages = [
 <Base title={title}>
   <article class="prose" set:html={html} />
   {subPages.length > 0 && (
-    <nav class="label" aria-label="Module paths">
+    <nav
+      class="module-links"
+      aria-label="Module paths"
+      style={`grid-template-columns: repeat(${subPages.length}, 1fr);`}
+    >
       {subPages.map(([doc, label]) => (
         <a href={`${base}/modules/${slug}/${doc}/`}>{label}</a>
       ))}
     </nav>
   )}
 </Base>
+
+<style>
+  .module-links {
+    display: grid;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .module-links a {
+    display: block;
+    text-align: center;
+    padding: 1.1rem 1.2rem;
+    border-right: 0.5px solid var(--hairline);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 120ms ease, color 120ms ease;
+  }
+  .module-links a:last-child { border-right: none; }
+  .module-links a:hover { background: var(--ink); color: var(--paper); }
+</style>
