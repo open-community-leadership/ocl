@@ -10,9 +10,11 @@ date: 2026-09-18
 
 Someone just offered to help. This is the moment most communities lose them.
 
-Not because anyone was unkind. Because nobody answered, or the answer was "great, thanks!" and then nothing. The person who raised their hand is now waiting, and waiting feels like being ignored.
+Nobody was unkind. Somebody just never replied. Or got busy and meant to come back to it. Or replied "great, thanks!" and then moved on to something else.
 
-This module is about the gap between "I'd like to help" and actually helping. For an organiser, that is someone who said yes to helping at an event. For a maintainer, it is someone who said they'd like to contribute. Both are standing there, hand up, waiting to hear what happens next.
+Say yes to helping and you expect to hear back. When you don't, it doesn't feel like busy. It feels like ignored.
+
+That gap, between "I'd like to help" and actually helping, is what this module is about. An organiser sees it when someone says yes at an event. A maintainer sees it when someone offers to contribute. Same gap, hand still up, waiting to hear what happens next.
 
 
 ---

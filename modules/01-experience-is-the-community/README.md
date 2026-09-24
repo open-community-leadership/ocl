@@ -1,4 +1,4 @@
-# Module 1 — Experience is the Community
+# Module 01 — Experience is the Community
 
 *Open Community Leadership (OCL) · Introducing the POPCOM Framework*
 
@@ -35,6 +35,7 @@ POPCOM is the framework underneath OCL — the lens running through every module
 As you work, you'll meet two POPCOM dimensions as named stages on the canvas: **Participation** and **Connection**. They shape community life so directly that they need their own place in the journey. That's not coincidence. POPCOM dimensions aren't abstract ideas. They show up in concrete moments: how someone enters, whether they feel noticed, what they are invited to do, and whether they are given a reason to return.
 
 Future modules explore the other dimensions more deeply.
+
 ---
 
 ## What you'll learn
@@ -65,6 +66,7 @@ The canvas works across different kinds of community spaces. Each stage includes
 - [`module-1-experience-workshop-slide-ES.pdf`](../../resources/templates/module-01/module-1-experience-workshop-slide-ES.pdf) — the same slides with Spanish captions.
 
 Print the canvas at A3 for group work or A4 for individual use. This canvas is essential for this module.
+
 ---
 
 ## Reflect
@@ -93,6 +95,7 @@ A real-world improvement tested later is the strongest evidence of all.
 
 
 That is when you notice how this module can change how your community works for the better.
+
 ---
 
 ## Earn the Experience badge
