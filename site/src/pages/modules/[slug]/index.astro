@@ -6,7 +6,7 @@ export function getStaticPaths() {
   return listModules().map((m) => ({ params: { slug: m.slug }, props: m }));
 }
 
-const { slug, title, html } = Astro.props;
+const { slug, title, html, headings } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const subPages = [
   ['self-guided', 'Self-guided'],
@@ -15,7 +15,19 @@ const subPages = [
 ].filter(([doc]) => renderModuleDoc(slug, doc));
 ---
 <Base title={title}>
-  <article class="prose" set:html={html} />
+  <div class="module-body">
+    <article class="prose" set:html={html} />
+    {headings.length > 0 && (
+      <aside class="toc" aria-label="On this page">
+        <p class="toc-label">On this page</p>
+        <ul>
+          {headings.map((h) => (
+            <li><a href={`#${h.id}`} data-toc-id={h.id}>{h.text}</a></li>
+          ))}
+        </ul>
+      </aside>
+    )}
+  </div>
   {subPages.length > 0 && (
     <nav
       class="module-links"
@@ -50,4 +62,80 @@ const subPages = [
   }
   .module-links a:last-child { border-right: none; }
   .module-links a:hover { background: var(--ink); color: var(--paper); }
+
+  .module-body { display: flex; align-items: flex-start; gap: 1.5rem; }
+  .module-body .prose { flex: 0 1 auto; min-width: 0; }
+
+  .toc {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 1.5rem;
+    padding: 3rem 0 0 1.4rem;
+    border-left: 0.5px solid var(--hairline);
+  }
+  .toc-label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0 0 0.9rem;
+  }
+  .toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .toc a {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+    margin-left: -0.05rem;
+    transition: color 120ms ease, border-color 120ms ease;
+  }
+  .toc a:hover { color: var(--ink); }
+  .toc a.active { color: var(--ink); border-left-color: var(--ink); font-weight: 500; }
+
+  @media (max-width: 900px) {
+    .toc { display: none; }
+  }
 </style>
+
+<script>
+  const links = document.querySelectorAll('.toc a[data-toc-id]');
+  if (links.length) {
+    const linkById = new Map();
+    links.forEach((a) => linkById.set(a.getAttribute('data-toc-id'), a));
+    links[0].classList.add('active');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const link = linkById.get(entry.target.id);
+          if (!link) continue;
+          links.forEach((a) => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      },
+      { rootMargin: '-15% 0px -75% 0px', threshold: 0 },
+    );
+
+    document.querySelectorAll('article.prose h2[id]').forEach((h) => observer.observe(h));
+
+    // The last section is often too short to ever sit inside the observer's
+    // detection band, so it would never light up. Force it active once the
+    // page is scrolled to the bottom.
+    const atBottom = () => window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!atBottom()) return;
+        links.forEach((a) => a.classList.remove('active'));
+        links[links.length - 1].classList.add('active');
+      },
+      { passive: true },
+    );
+  }
+</script>

@@ -75,12 +75,41 @@ function resolveContentLink(href, fromDir) {
   return withHash(`https://github.com/open-community-leadership/ocl/blob/main/${encoded}`);
 }
 
+function decodeEntities(str) {
+  return str
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Headings get an id so in-page tables of contents (module sidebar TOC) can
+// link straight to them; ids are de-duped per document in case of repeats.
 function renderer(fromDir) {
+  const usedIds = new Map();
   return {
     link({ href, title, tokens }) {
       const text = this.parser.parseInline(tokens);
       const titleAttr = title ? ` title="${title}"` : '';
       return `<a href="${resolveContentLink(href, fromDir)}"${titleAttr}>${text}</a>`;
+    },
+    heading({ tokens, depth }) {
+      const text = this.parser.parseInline(tokens);
+      const base = slugify(decodeEntities(text.replace(/<[^>]+>/g, '')));
+      const count = usedIds.get(base) ?? 0;
+      usedIds.set(base, count + 1);
+      const id = count > 0 ? `${base}-${count}` : base;
+      return `<h${depth} id="${id}">${text}</h${depth}>`;
     },
   };
 }
@@ -128,7 +157,12 @@ export function listModules() {
       const raw = fs.readFileSync(path.join(dir, d.name, 'README.md'), 'utf-8');
       const body = stripFrontmatter(raw);
       const title = body.match(/^#\s+(.+)$/m)?.[1] ?? d.name;
-      return { slug: d.name, title, html: renderMarkdown(body, `modules/${d.name}`) };
+      const html = renderMarkdown(body, `modules/${d.name}`);
+      const headings = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map(([, id, inner]) => ({
+        id,
+        text: decodeEntities(inner.replace(/<[^>]+>/g, '')),
+      }));
+      return { slug: d.name, title, html, headings };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }

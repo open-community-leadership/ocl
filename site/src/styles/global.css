@@ -21,6 +21,10 @@ html {
 
 body { margin: 0; }
 
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 .frame {
   max-width: 1040px;
   margin: 0 auto;
