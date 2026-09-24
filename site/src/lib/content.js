@@ -55,6 +55,10 @@ function resolveContentLink(href, fromDir) {
     return withHash(`${base}/research/`);
   }
 
+  if (resolved === 'events' || resolved === 'events/README.md') {
+    return withHash(`${base}/events/`);
+  }
+
   const interview = resolved.match(/^research\/interviews\/([^/]+)\.md$/);
   if (interview) {
     return withHash(`${base}/research/interviews/${interview[1]}/`);
@@ -298,4 +302,17 @@ export function attendanceByModule(slug) {
 
 export function moduleAttendeeTotal(slug) {
   return attendanceByModule(slug).reduce((sum, e) => sum + e.attendees, 0);
+}
+
+// Each entry: { event, date (ISO), location, module (module slug), link (signup URL) }
+// Entries whose date has passed drop off automatically — move them into
+// modules/attendance.json with a real attendee count once the event has happened.
+export function listUpcomingEvents() {
+  const file = path.join(repoRoot, 'events', 'upcoming.json');
+  if (!fs.existsSync(file)) return [];
+  const entries = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  return entries
+    .map((e) => ({ ...e, date: new Date(e.date) }))
+    .filter((e) => e.date.getTime() >= Date.now())
+    .sort((a, b) => a.date - b.date);
 }

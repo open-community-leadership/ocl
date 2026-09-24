@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDoc, listModules, listUpcomingEvents, listAttendance } from '../lib/content.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const TYPE_LABEL = { self: 'Self-guided', workshop: 'Workshop', mentor: 'Mentor' };
+
+const html = renderDoc('events/README.md');
+const mods = listModules();
+const moduleTitle = (slug) => mods.find((m) => m.slug === slug)?.title ?? slug;
+
+const upcoming = listUpcomingEvents();
+const past = listAttendance();
+
+const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+  weekday: 'short',
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+});
+---
+<Base title="Events" description="Upcoming and past OCL workshops, and where to sign up.">
+  <article class="prose" set:html={html} />
+
+  <div class="prose">
+    <h2>Upcoming events</h2>
+    {upcoming.length > 0 ? (
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Module</th>
+            <th>Sign up</th>
+          </tr>
+        </thead>
+        <tbody>
+          {upcoming.map((e) => (
+            <tr>
+              <td>{e.event}</td>
+              <td>{dateFormatter.format(e.date)}</td>
+              <td>{e.location}</td>
+              <td><a href={`${base}/modules/${e.module}/`}>{moduleTitle(e.module)}</a></td>
+              <td><a href={e.link}>Sign up</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <p><em>No upcoming events scheduled.</em></p>
+    )}
+
+    <h2>Past events</h2>
+    {past.length > 0 ? (
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Location</th>
+            <th>Module</th>
+            <th>Type</th>
+            <th>Attendees</th>
+          </tr>
+        </thead>
+        <tbody>
+          {past.map((e) => (
+            <tr>
+              <td>{e.event}</td>
+              <td>{e.location || '—'}</td>
+              <td><a href={`${base}/modules/${e.module}/`}>{moduleTitle(e.module)}</a></td>
+              <td>{TYPE_LABEL[e.type] ?? e.type}</td>
+              <td>{e.attendees}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <p><em>No past events yet.</em></p>
+    )}
+  </div>
+</Base>
