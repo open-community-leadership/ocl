@@ -285,7 +285,7 @@ export function renderInterview(slug) {
   return { slug, title, html: renderMarkdown(body, 'research/interviews') };
 }
 
-// Each entry: { module: <module slug>, event, location, type ("self" | "workshop" | "mentor"), attendees, photos: [<path under resources/, e.g. "photos/europython-2026/1.jpg">] }
+// Each entry: { module: <module slug>, event, location, type ("self" | "workshop" | "mentor"), attendees, link (optional event page URL), photos: [<path under resources/, e.g. "photos/europython-2026/1.jpg">] }
 export function listAttendance() {
   const file = path.join(repoRoot, 'modules', 'attendance.json');
   if (!fs.existsSync(file)) return [];
