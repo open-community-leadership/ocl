@@ -8,14 +8,25 @@ date: 2026-09-18
 
 > No owner, no onboarding.
 
-Someone just offered to help. This is the moment most communities lose them.
+Someone just offered to help. You are probably happy to hear it. You thank them, and you are glad they made the first move.
 
-Nobody was unkind. Somebody just never replied. Or got busy and meant to come back to it. Or replied "great, thanks!" and then moved on to something else.
+But what happens next matters.
 
-Say yes to helping and you expect to hear back. When you don't, it doesn't feel like busy. It feels like ignored.
+Reply too slowly and you may lose their enthusiasm. Send them information too quickly, before you have worked out with your team what help is actually needed, and you can create confusion instead.
 
-That gap, between "I'd like to help" and actually helping, is what this module is about. An organiser sees it when someone says yes at an event. A maintainer sees it when someone offers to contribute. Same gap, hand still up, waiting to hear what happens next.
+This is where many communities lose people.
 
+Nobody was unkind. Somebody just never replied. Or got busy and meant to come back to it. Or replied, “Great, thanks!” and then moved on to something else.
+
+When you say yes to helping, you expect to hear what happens next. When you don't, it doesn't feel like people are busy. It feels like you were ignored.
+
+That gap, between “I'd like to help” and actually helping, is what this module is about.
+
+An organiser sees it when someone offers to help at an event. A maintainer sees it when someone offers to contribute to a project.
+
+The setting is different but the gap is the same.
+
+They have raised their hand. so now they are waiting to hear what happens next.
 
 ---
 
@@ -25,9 +36,16 @@ By the end of this module, you can **trace what a new volunteer actually experie
 
 ## Your intention
 
-You're about to trace what happened to one specific person. Before you start, finish this sentence: the next person who raises their hand should walk away knowing ___.
+You are about to trace what happened to one specific person who offered to help.
+Before you start, finish this sentence:
+The next person who reaches out and says they are interested in helping should receive a reply that leaves them knowing ________.
 
-You are not looking for a goal, but a reason. The grid tells you what's broken. This is how you start fixing it.
+Think about what they need in that moment. Who will get back to them? What happens next? Is there a real way for them to help? Who can they ask if they are unsure?
+
+You are not trying to write the perfect welcome message. You are deciding what someone should understand after that first reply.
+
+The Volunteer Walk will show you where your current experience falls short of that.
+
 
 ---
 
@@ -94,10 +112,7 @@ You can complete this module through any of the three learning paths.
 
 The module is complete when you can share:
 
-1. Your Volunteer Walk grid (smooth, unclear, missing, and what actually happens)
-2. The one gap you chose and why it fits your community
-3. Who owns the change
-4. What happened when you tested it with the next volunteer, or, if you have not had another volunteer yet, how you will know whether the change worked when you do.
+- The one gap you chose, why it fits your community, and how you plan to make that change.
 
 A real volunteer who came back is the strongest evidence of all.
 
