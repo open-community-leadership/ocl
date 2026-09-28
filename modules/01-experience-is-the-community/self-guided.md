@@ -14,7 +14,6 @@ People stay because of what it feels like to be there. They leave for the same r
 
 ## First, 5 minutes on POPCOM
 
-(too AI-y next sentence)
 Before you begin, get familiar with POPCOM. It names six parts of a healthy community: **P**articipation, **O**wnership, **P**urpose, **C**onnection, **O**pportunity, **M**entorship. It's the lens every module works through.
 
 This module starts with the experience itself. Two POPCOM dimensions, **Participation** and **Connection**, also appear as stages on the canvas because they shape so much of how a community feels.

@@ -26,7 +26,7 @@ An organiser sees it when someone offers to help at an event. A maintainer sees 
 
 The setting is different but the gap is the same.
 
-They have raised their hand. so now they are waiting to hear what happens next.
+SThey have raised their hand. So now they are waiting to hear what happens next.
 
 ---
 
@@ -44,8 +44,7 @@ Think about what they need in that moment. Who will get back to them? What happe
 
 You are not trying to write the perfect welcome message. You are deciding what someone should understand after that first reply.
 
-The Volunteer Walk will show you where your current experience falls short of that.
-
+SThe Volunteer Walk will show you where your current experience falls short of that.
 
 ---
 
