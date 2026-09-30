@@ -10,7 +10,7 @@ date: 2026-09-18
 
 Someone just offered to help. You are probably happy to hear it. You thank them, and you are glad they made the first move.
 
-But what happens next matters.
+But what happens next makes a difference.
 
 Reply too slowly and you may lose their enthusiasm. Send them information too quickly, before you have worked out with your team what help is actually needed, and you can create confusion instead.
 
