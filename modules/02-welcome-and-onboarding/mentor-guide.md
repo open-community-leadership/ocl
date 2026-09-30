@@ -1,8 +1,4 @@
-# Module 02 — Welcome and Onboarding: Mentor Guide
-
-*Guidance for mentors supporting participants through this module.*
-
----
+# Module 02 — Welcome and Onboarding for Volunteers: Mentor Guide
 
 ## Your role
 
