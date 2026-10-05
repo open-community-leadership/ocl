@@ -26,9 +26,28 @@ An organiser sees it when someone offers to help at an event. A maintainer sees 
 
 The setting is different but the gap is the same.
 
-SThey have raised their hand. So now they are waiting to hear what happens next.
+They have raised their hand. So now they are waiting to hear what happens next.
 
 ---
+
+## Who this module is for
+
+Organisers and maintainers who take volunteers, and have had someone offer to help recently.
+
+Two things have to be true:
+
+- **Your community has a way in.** Somewhere people can offer, and work they could do if they did. If there is no opening for volunteers, there is nothing to trace yet. This module is not for you until there is.
+- **Someone has used it.** One real person who offered recently, whose name you know. Not "volunteers in general."
+
+You also need someone from outside. You know where everything is in your community, so you can't see what's missing. A newcomer can. Each path gives you one:
+
+---
+
+- **Self-guided:** you ask the volunteer, or a friend who has never been near your community.
+- **Workshop:** you pair with someone from another community and walk each other's.
+- **Mentor:** your mentor walks your community cold before you start.
+
+If nobody has offered yet, the next person who does is your case.
 
 ## Goal
 
@@ -44,7 +63,7 @@ Think about what they need in that moment. Who will get back to them? What happe
 
 You are not trying to write the perfect welcome message. You are deciding what someone should understand after that first reply.
 
-SThe Volunteer Walk will show you where your current experience falls short of that.
+The Volunteer Walk will show you where your current experience falls short of that.
 
 ---
 
