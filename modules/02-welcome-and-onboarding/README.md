@@ -24,9 +24,9 @@ That gap, between “I'd like to help” and actually helping, is what this modu
 
 An organiser sees it when someone offers to help at an event. A maintainer sees it when someone offers to contribute to a project.
 
-The setting is different but the gap is the same.
+The setting is different but the gap is always the same.
 
-They have raised their hand. So now they are waiting to hear what happens next.
+They have raised their hand. So now, they are waiting to hear what you can offer next.
 
 ---
 
