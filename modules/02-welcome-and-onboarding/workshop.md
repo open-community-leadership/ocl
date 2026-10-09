@@ -24,9 +24,15 @@ Want the full framework? → [POPCOM overview](../../POPCOM.md)
 
 Pick the track that fits. The rest of the session follows your track, and you can ignore the other one.
 
-**Track A: You have volunteers.** Pick one person who offered to help. You will use the Volunteer Walk grid to trace what happened to them after they offered. You do not need to prepare. Work from what you already know. Where you do not know, write "I don't know".
+### Track A: You have volunteers
 
-**Track B: No one has reached out to volunteer yet.** You will design what you want to happen, using the starter template. You need nothing but a community, or the idea of one.
+Pick one person who offered to help. You will use the Volunteer Walk grid to trace what happened to them after they offered. You do not need to prepare. Work from what you already know. Where you do not know, write "I don't know".
+
+### Track B: No one has reached out to volunteer yet
+
+You will design what you want to happen, using the starter template. You need nothing but a community, or the idea of one.
+
+### The four phases
 
 Both tracks use the same four phases of a volunteer's journey:
 
@@ -37,7 +43,9 @@ Both tracks use the same four phases of a volunteer's journey:
 
 Track A asks what happened at each phase. Track B asks what you want to happen.
 
-**How the grid works.** The Volunteer Walk grid has one row per phase. For each row you fill in four things: the phase, a result (**smooth**, **unclear** or **missing**), one line on what actually happened, and who owns it. The starter template for Track B has the same rows, but you write what you *want* in each one.
+### How the grid works
+
+The Volunteer Walk grid has one row per phase. For each row you fill in four things: the phase, a result (**smooth**, **unclear** or **missing**), one line on what actually happened, and who owns it. The starter template for Track B has the same rows, but you write what you *want* in each one.
 
 ## What to bring
 
@@ -62,7 +70,11 @@ Blocks of 20 to 30 minutes, done in order. Do as many as your time allows. Each 
 
 ### Block 1: Where you are (25 to 30 min)
 
-**Start with the worst case (10 min).** This part is for everyone, whichever track you're on. One question: **what would guarantee a volunteer never comes back?**
+#### Part 1: Start with the worst case (10 min)
+
+This part is for everyone, whichever track you're on. One question:
+
+**What would guarantee a volunteer never comes back?**
 
 Be specific. Silence counts. So does a reply that says "thanks!" and nothing else.
 
@@ -72,11 +84,13 @@ Be specific. Silence counts. So does a reply that says "thanks!" and nothing els
 
 Keep the combined list. You need it next.
 
-**Then split by track (15 to 20 min).**
+#### Part 2: Work on your own track (15 to 20 min)
 
-Work on your own for this part. Do not compare notes yet. You share what you wrote in Block 3.
+Work on your own. Do not compare notes yet. You share what you wrote in Block 3. If you do not know the answer to a question, write "I don't know" in that row. That is a useful answer.
 
-**Track A:** Take the volunteer you chose and go through your grid one phase at a time: Offer, Reply, First task, After. Write what actually happened, not what you intended.
+##### Track A: trace what happened
+
+Take the volunteer you chose and go through your grid one phase at a time: Offer, Reply, First task, After. Write what actually happened, not what you intended.
 
 - For each phase, mark the result **smooth**, **unclear** or **missing**.
 - Write one line on what happened. A mark with no line tells you nothing later.
@@ -84,7 +98,9 @@ Work on your own for this part. Do not compare notes yet. You share what you wro
 
 When all four rows are filled in, look at the Result column. Underline the phases marked **unclear** or **missing**. Those are your gaps.
 
-**Track B:** Each item on your worst-case list is something you want to avoid. Open the template and answer phase by phase what you would want to happen instead:
+##### Track B: design what you want
+
+Each item on your worst-case list is something you want to avoid. Open the template and answer phase by phase what you would want to happen instead:
 
 - **Offer:** how would someone find out they can help?
 - **Reply:** who would answer, and how fast?
@@ -93,11 +109,11 @@ When all four rows are filled in, look at the Result column. Underline the phase
 
 When the four rows are filled in, read your worst-case list again. Does your draft avoid every item on it? Put a star next to any item your draft still allows.
 
-Either track: if you do not know the answer to a question, write "I don't know" in that row. That is a useful answer.
-
 ### Block 2: Ownership (10 to 15 min)
 
-Go through each gap in your grid (Track A), or each row in your template (Track B), and ask: **who is responsible for this, or who will be?**
+Go through each gap in your grid (Track A), or each row in your template (Track B), and ask:
+
+**Who is responsible for this, or who will be?**
 
 Write the answer in the "Who owns this?" column, using a name or a role. If the answer is "nobody" or "whoever happens to be nearby", write **no owner**. That is the finding. Mark every row where you wrote it.
 
@@ -118,7 +134,9 @@ When the rounds are done, write down one thing the others noticed that you had n
 
 Set up four tables, one per phase: Offer, Reply, First task, After. Put paper and pens on each table, and a copy of the [Volunteer Walk Patch Notes](README.md#resources) for your version. They collect what other communities do at each phase.
 
-Each table has one question: **what works here, and what have you seen go wrong?**
+Each table has one question:
+
+**What works here, and what have you seen go wrong?**
 
 1. Pick one person to host each table. The host stays put for the whole block.
 2. Everyone else picks a table to start at. Track A: start at the phase where most of your gaps are. Track B: start at the phase you are least sure about.
@@ -130,14 +148,20 @@ Then go back to your grid or template and write down two or three ideas you coul
 
 ### Block 5: What you noticed (20 to 25 min)
 
-**First (10 min):** what did you see in this session that had not occurred to you before? For many people this is the real output. Most community leaders were never trained to think about this moment.
+#### Part 1: Your own noticing (10 min)
+
+**What did you see in this session that had not occurred to you before?**
+
+For many people this is the real output. Most community leaders were never trained to think about this moment.
 
 1. Write it down alone, in a sentence or two (2 min).
 2. Share it with a partner (2 min).
 3. Join another pair and share again. Pick the one that surprised you most (3 min).
 4. Each group says that one thing to the room (3 min).
 
-**Then, if you have something ready,** answer these five questions about one change you could make:
+#### Part 2: A change to make (optional)
+
+If you have something ready, answer these five questions about one change you could make:
 
 1. **The gap or decision you would act on first:**
 2. **The change that would address it:**
@@ -159,6 +183,12 @@ You can point to:
 
 If you have a change and an owner, bring that too. It is not required.
 
+## You did it!
+
+You looked at the moment someone offers to help, whether it already happened or has not yet. Now you can see it.
+
+Now wait for the next offer. See how close it comes to what you planned.
+
 ## You have earned your Workshop badge!
 
 To claim the **Module 02 - Workshop** badge:
@@ -167,12 +197,6 @@ To claim the **Module 02 - Workshop** badge:
 2. Select **Module 02 - Workshop - Welcome and Onboarding for Volunteers**.
 3. Click **Get this badge** and log in or create a Badge Wallet account.
 4. Submit your evidence and send it for review.
-
-## You did it!
-
-You looked at the moment someone offers to help, whether it already happened or has not yet. Now you can see it.
-
-Now wait for the next offer. See how close it comes to what you planned.
 
 ---
 
