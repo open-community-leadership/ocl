@@ -1,5 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import '@fontsource/lora/700.css';
+import '@fontsource/lora/700-italic.css';
 import { listModules, renderModuleDoc } from '../../../lib/content.js';
 
 export function getStaticPaths() {
@@ -8,8 +10,111 @@ export function getStaticPaths() {
     .filter((entry) => entry.props);
 }
 
-const { title, html } = Astro.props;
+const { title } = Astro.props;
+let { html } = Astro.props;
+
+// The markdown stays the single source of truth. Conventions it relies on:
+//   ### Block N: Title (time)      -> block with its number above the title and its duration beside it
+//   ##### Track A: ... then Track B -> two columns (same for ### under the starting point,
+//                                      and for a two-item Track A / Track B bullet list)
+//   a paragraph that is only **bold?** -> highlighted key question
+//   a step ending in (3 min)       -> timing pulled out of the step text
+const TRACK_PAIR = /(<h5 id="track-a[^"]*">[\s\S]*?)(?=<h5 id="track-b)(<h5 id="track-b[^"]*">[\s\S]*?)(?=<h[1-6][ >]|$)/g;
+const START_PAIR = /(<h3 id="track-a[^"]*">[\s\S]*?)(?=<h3 id="track-b)(<h3 id="track-b[^"]*">[\s\S]*?)(?=<h[1-6][ >]|$)/;
+const LIST_PAIR = /<ul>\s*<li>Track A: ([\s\S]*?)<\/li>\s*<li>Track B: ([\s\S]*?)<\/li>\s*<\/ul>/g;
+const BLOCK_HEAD = /<h3 id="block-\d[^"]*">Block (\d+): ([\s\S]*?) \(([^)]*)\)<\/h3>/g;
+
+function decorate(inner) {
+  return inner
+    .replace(TRACK_PAIR, (_, a, b) => `<div class="tracks"><div class="col a">${a}</div><div class="col b">${b}</div></div>`)
+    .replace(LIST_PAIR, (_, a, b) => `<div class="tracks"><div class="col a"><h5>Track A</h5><p>${cap(a)}</p></div><div class="col b"><h5>Track B</h5><p>${cap(b)}</p></div></div>`)
+    .replace(/<p><strong>([^<]*\?)<\/strong><\/p>/g, '<p class="ask">$1</p>')
+    .replace(/\s*\((\d+ min)\)\.?<\/li>/g, '<span class="t">$1</span></li>')
+    .replace(/<h4 id="([^"]*)">([\s\S]*?) \(([^)]*)\)<\/h4>/g, '<h4 id="$1">$2 <span class="m">$3</span></h4>');
+}
+
+// Every two-route column opens with the same shaded h5 title, wherever it came from.
+const asH5 = (h) => h.replace(/^<h3 /, '<h5 ').replace('</h3>', '</h5>');
+const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+html = html.replace(START_PAIR, (_, a, b) => `<div class="tracks"><div class="col a">${asH5(a)}</div><div class="col b">${asH5(b)}</div></div>`);
+
+const heads = [...html.matchAll(BLOCK_HEAD)];
+let out = '';
+let cursor = 0;
+heads.forEach((m, i) => {
+  const start = m.index;
+  const after = start + m[0].length;
+  const stops = [heads[i + 1]?.index, html.indexOf('<h2', after), html.indexOf('<hr', after)].filter(
+    (n) => n !== undefined && n >= after,
+  );
+  const end = stops.length ? Math.min(...stops) : html.length;
+  out += html.slice(cursor, start);
+  out +=
+    `<div class="block"><h3 id="block-${m[1]}"><span class="blockrow"><span class="blockno">Block ${m[1]}</span></span>${m[2]}<span class="dur">${m[3]}</span></h3>` +
+    `${decorate(html.slice(after, end))}</div>`;
+  cursor = end;
+});
+out += html.slice(cursor);
+html = heads.length ? out : html;
 ---
 <Base title={title}>
-  <article class="prose" set:html={html} />
+  <div class="workshop">
+    <article class="prose" set:html={html} />
+  </div>
 </Base>
+
+<style is:global>
+  .workshop { --accent: #dcab2a; --on-accent: #2c2c2a; }
+  .workshop .prose { max-width: 820px; }
+  .workshop .prose blockquote {
+    display: inline-block; margin: 1.2rem 0; padding: 0.6rem 1.2rem; background: var(--accent); color: var(--on-accent);
+    border: 0; border-radius: 6px; font-style: italic; font-weight: 700; font-size: 1.8rem; line-height: 1.25;
+  }
+  .workshop .prose blockquote p { color: var(--on-accent); margin: 0; font-size: inherit; font-weight: inherit; }
+
+  /* Blocks */
+  .workshop .block { padding-block: 1.6rem; border-top: 1px solid var(--hairline); margin-top: 1.2rem; }
+  .workshop .block > h3 {
+    display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.9rem;
+    margin: 0 0 0.8rem; padding: 0; border: 0; font-size: 1.6rem;
+  }
+  .workshop .blockrow { flex-basis: 100%; margin-bottom: 0.7rem; }
+  .workshop .blockno {
+    display: inline-block; font: 600 1rem/1 var(--sans); letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.5rem 1rem; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+  }
+  .workshop .dur {
+    font: 500 0.75rem/1 var(--sans); padding: 0.35rem 0.7rem; border: 1px solid var(--ink);
+    border-radius: 999px; color: var(--ink); white-space: nowrap;
+  }
+  .workshop .block > h4 { margin-top: 1.8rem; }
+  .workshop .block h4 .m { text-transform: none; letter-spacing: 0.02em; color: var(--ink-muted); margin-left: 0.5rem; font-weight: 400; }
+
+  /* Key question */
+  .workshop .ask {
+    margin: 1rem 0; padding: 1rem 1.2rem; border-left: 5px solid var(--accent);
+    background: rgba(220, 171, 42, 0.2); border-radius: 0 8px 8px 0; font-family: var(--serif); font-size: 1.35rem; line-height: 1.3;
+    max-width: 28ch;
+  }
+
+  /* Steps as cards */
+  .workshop .block ol { list-style: none; padding: 0; counter-reset: st; display: grid; gap: 0.6rem; }
+  .workshop .block ol li {
+    counter-increment: st; display: flex; gap: 0.8rem; align-items: baseline; margin: 0;
+    padding: 0.7rem 0.9rem; border: 1px solid var(--hairline); border-radius: 8px; background: rgba(255, 255, 255, 0.35);
+  }
+  .workshop .block ol li::before { content: counter(st); font: 400 1.15rem/1.4 var(--serif); min-width: 1.2rem; }
+  .workshop .block ol li .t { margin-left: auto; padding-left: 0.8rem; font-size: 0.75rem; color: var(--ink-muted); white-space: nowrap; }
+
+  /* Two routes side by side */
+  .workshop .tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+  .workshop .col { padding: 0.2rem 1.1rem 0.8rem; border: 1.5px solid var(--ink); border-radius: 10px; min-width: 0; }
+  .workshop .col > :first-child { margin-top: 1rem; }
+  .workshop .col > h5 { margin: 1rem 0 0.8rem; font-weight: 700; }
+
+  @media (max-width: 720px) {
+    .workshop .tracks { grid-template-columns: minmax(0, 1fr); }
+    .workshop .ask { font-size: 1.15rem; }
+  }
+</style>
+
