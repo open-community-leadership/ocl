@@ -64,7 +64,9 @@ function resolveContentLink(href, fromDir) {
     return withHash(`${base}/research/interviews/${interview[1]}/`);
   }
 
-  if (resolved.startsWith('resources/')) {
+  // Browsers download or blank-render a raw .md served as a static asset, so
+  // markdown resources open on GitHub, where they render.
+  if (resolved.startsWith('resources/') && !resolved.endsWith('.md')) {
     const encoded = resolved.split('/').map(encodeURIComponent).join('/');
     return withHash(`${base}/${encoded}`);
   }
