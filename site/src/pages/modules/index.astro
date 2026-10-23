@@ -12,6 +12,7 @@ const mods = listModules().map((m) => ({ ...m, attendees: moduleAttendeeTotal(m.
       {mods.map((m) => (
         <li>
           <a href={`${base}/modules/${m.slug}/`}>{m.title}</a>
+          {m.isNew && <span class="tag-new">New</span>}
           {m.attendees > 0 && (
             <a class="attendee-count" href={`${base}/stats/#${m.slug}`}>{m.attendees} attended</a>
           )}

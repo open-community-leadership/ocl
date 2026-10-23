@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { Marked } from 'marked';
 
 const repoRoot = path.resolve(process.cwd(), '..');
@@ -168,7 +169,7 @@ export function listModules() {
         id,
         text: decodeEntities(inner.replace(/<[^>]+>/g, '')),
       }));
-      return { slug: d.name, title, html, headings };
+      return { slug: d.name, title, html, headings, isNew: isNew(`modules/${d.name}/README.md`, raw) };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }
@@ -191,10 +192,28 @@ function parseFrontmatterDate(raw) {
   return m ? new Date(m[1]) : null;
 }
 
-export function isNew(raw) {
-  const date = parseFrontmatterDate(raw);
-  if (!date) return false;
-  return (Date.now() - date.getTime()) / 86400000 <= NEW_DAYS;
+// When a file was added: an explicit `date:` in its frontmatter wins (use it to
+// pin or extend "New"), otherwise the commit that first added it, otherwise its
+// mtime (untracked or no git history). The deploy checks out full history so
+// this works in CI too.
+export function addedDate(relPath, raw) {
+  const abs = path.join(repoRoot, relPath);
+  const text = raw ?? (relPath.endsWith('.md') ? fs.readFileSync(abs, 'utf-8') : '');
+  const fm = parseFrontmatterDate(text);
+  if (fm) return fm;
+  try {
+    const out = execFileSync('git', ['log', '--diff-filter=A', '--follow', '--format=%aI', '-1', '--', relPath], {
+      cwd: repoRoot,
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    if (out) return new Date(out);
+  } catch {}
+  return new Date(fs.statSync(abs).mtimeMs);
+}
+
+export function isNew(relPath, raw) {
+  return (Date.now() - addedDate(relPath, raw).getTime()) / 86400000 <= NEW_DAYS;
 }
 
 function readDocMeta(readmePath, fallbackName) {
@@ -236,20 +255,11 @@ export function listResourceSections() {
       const sectionRel = `resources/${d.name}`;
       const { title, description } = readDocMeta(path.join(dir, d.name, 'README.md'), d.name);
       const files = walkFiles(sectionRel).map((relPath) => {
-        const abs = path.join(repoRoot, relPath);
-        let fileIsNew = false;
-        if (relPath.endsWith('.md')) {
-          const raw = fs.readFileSync(abs, 'utf-8');
-          fileIsNew = isNew(raw);
-        } else {
-          const mtime = fs.statSync(abs).mtimeMs;
-          fileIsNew = (Date.now() - mtime) / 86400000 <= NEW_DAYS;
-        }
         return {
           relPath,
           name: path.posix.relative(sectionRel, relPath),
-          href: resourceHref(relPath),
-          isNew: fileIsNew,
+          href: relPath.endsWith('.md') ? resolveContentLink(relPath, '.') : resourceHref(relPath),
+          isNew: isNew(relPath),
         };
       });
       return { slug: d.name, title, description, files };
@@ -279,10 +289,11 @@ export function listNewItems() {
   for (const d of fs.readdirSync(interviewDir, { withFileTypes: true })) {
     if (!d.isFile() || !d.name.endsWith('.md') || d.name === 'README.md') continue;
     const raw = fs.readFileSync(path.join(interviewDir, d.name), 'utf-8');
-    if (!isNew(raw)) continue;
+    const rel = `research/interviews/${d.name}`;
+    if (!isNew(rel, raw)) continue;
     const slug = d.name.replace(/\.md$/, '');
     const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? slug;
-    const date = parseFrontmatterDate(raw);
+    const date = addedDate(rel, raw);
     items.push({ title, href: `${base}/research/interviews/${slug}/`, date });
   }
 
@@ -293,10 +304,10 @@ export function listNewItems() {
     for (const relPath of walkFiles(`resources/${section.name}`)) {
       if (!relPath.endsWith('.md')) continue;
       const raw = fs.readFileSync(path.join(repoRoot, relPath), 'utf-8');
-      if (!isNew(raw)) continue;
+      if (!isNew(relPath, raw)) continue;
       const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? path.posix.basename(relPath, '.md');
-      const date = parseFrontmatterDate(raw);
-      items.push({ title, href: resourceHref(relPath), date });
+      const date = addedDate(relPath, raw);
+      items.push({ title, href: resolveContentLink(relPath, '.'), date });
     }
   }
 
@@ -307,9 +318,10 @@ export function listNewItems() {
     const readmePath = path.join(moduleDir, d.name, 'README.md');
     if (!fs.existsSync(readmePath)) continue;
     const raw = fs.readFileSync(readmePath, 'utf-8');
-    if (!isNew(raw)) continue;
+    const rel = `modules/${d.name}/README.md`;
+    if (!isNew(rel, raw)) continue;
     const title = raw.match(/^#\s+(.+)$/m)?.[1] ?? d.name;
-    const date = parseFrontmatterDate(raw);
+    const date = addedDate(rel, raw);
     items.push({ title, href: `${base}/modules/${d.name}/`, date });
   }
 
