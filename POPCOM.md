@@ -146,7 +146,7 @@ This is the dimension that open source communities most consistently neglect. An
 
 ## Using POPCOM in practice
 
-**For individuals:** Use the [Leadership Passport](resources/templates/module-completion-log.md) to reflect on your own journey across the six dimensions.
+**For individuals:** Use the [Leadership Passport](resources/passport/leadership-passport.md) to reflect on your own journey across the six dimensions.
 
 **For communities:** Use the [Community Experience Canvas](resources/templates/module-01/OCL·WORKSHOP-1-Community-Experience-Canvas.pdf) to walk through what people actually experience in your community.
 

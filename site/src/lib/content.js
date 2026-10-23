@@ -39,6 +39,10 @@ function resolveContentLink(href, fromDir) {
     return withHash(`${base}/modules/${moduleDir[1]}/`);
   }
 
+  if (resolved === 'resources/passport/leadership-passport.md') {
+    return withHash(`${base}/passport/`);
+  }
+
   if (resolved === 'POPCOM.md') {
     return withHash(`${base}/popcom/`);
   }

@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderDoc } from '../lib/content.js';
+
+// The Holder section is laid out like a passport page: a photo frame beside the
+// details. Markdown can't express that, so the page wraps the caption and table.
+const html = renderDoc('resources/passport/leadership-passport.md').replace(
+  /(<h2 id="holder">[\s\S]*?<\/h2>)\s*<p><em>([\s\S]*?)<\/em><\/p>\s*(<table>[\s\S]*?<\/table>)/,
+  (_, heading, caption, table) =>
+    `${heading}<div class="holder"><div class="photo" role="img" aria-label="Photo frame"><span>${caption}</span></div><div class="details">${table}</div></div>`,
+);
+---
+<Base title="Leadership Passport">
+  <article class="prose" set:html={html} />
+</Base>
+
+<style is:global>
+  .prose .holder { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 1.5rem; align-items: start; margin: 1rem 0 1.4rem; }
+  .prose .holder .photo {
+    aspect-ratio: 3 / 4; border: 2px dashed var(--ink-muted); border-radius: 4px;
+    display: flex; align-items: flex-end; justify-content: center; padding: 0.8rem; text-align: center;
+  }
+  .prose .holder .photo span { font-size: 0.78rem; line-height: 1.35; font-style: italic; color: var(--ink-muted); }
+  .prose .holder .details table { margin: 0; }
+  @media (max-width: 720px) {
+    .prose .holder { grid-template-columns: 1fr; }
+    .prose .holder .photo { width: 150px; }
+  }
+  @media print { .prose .holder .photo { border-color: #000; } }
+</style>
