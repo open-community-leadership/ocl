@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { renderDocSplit, listResourceSections } from '../lib/content.js';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const { html, attributionHtml } = renderDocSplit('resources/README.md');
-const sections = listResourceSections().filter((section) => section.slug !== 'passport');
+const sections = listResourceSections();
 ---
 <Base title="Resources">
   <article class="prose" set:html={html} />
@@ -19,6 +19,10 @@ const sections = listResourceSections().filter((section) => section.slug !== 'pa
         ) : section.slug === 'feedback' ? (
           <ul>
             <li><a href={`${base}/feedback/`}>Workshop feedback form</a></li>
+          </ul>
+        ) : section.slug === 'passport' ? (
+          <ul>
+            <li><a href={`${base}/passport/`}>Leadership Passport</a></li>
           </ul>
         ) : section.slug === 'stats' ? (
           <ul>
