@@ -22,7 +22,7 @@ const sections = listResourceSections();
           </ul>
         ) : section.slug === 'passport' ? (
           <ul>
-            <li><a href={`${base}/passport/`}>Leadership Passport</a></li>
+            <li><a href={`${base}/passport/`}>Leadership Passport</a>{section.files.some((f) => f.isNew) && <span class="tag-new">New</span>}</li>
           </ul>
         ) : section.slug === 'stats' ? (
           <ul>

@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import { listNewItems } from '../lib/content.js';
+import { listNewItems, isNew } from '../lib/content.js';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const newItems = listNewItems();
+const passportIsNew = isNew('resources/passport/leadership-passport.md');
 const popcom = [
   ['P', 'Participation', 'How people join'],
   ['O', 'Ownership', 'How people gain responsibility'],
@@ -34,7 +35,6 @@ const popcom = [
     <div class="spec-label"><span class="label">About OCL:</span></div>
     <div class="spec-body about">
       <h3>Practical frameworks and tools for communities to grow people, share responsibility, and create future leaders.</h3>
-      <p>Open Community Leadership (OCL) is an open-source project for people who build and sustain communities. It turns community leadership knowledge into practical frameworks, workshops, exercises and resources that can be learned, adapted and passed on.</p>
       <p>OCL focuses on the human infrastructure behind sustainable open source. It focuses on how people join, participate, build relationships, take responsibility, grow into leadership and help the next generation do the same.</p>
       <p>At the centre of OCL is <strong>POPCOM</strong>, a framework for understanding six dimensions of sustainable community life: Participation, Ownership, Purpose, Connection, Opportunity and Mentorship.</p>
       <p>OCL is designed for community organisers, maintainers, volunteer leaders, mentors and anyone working to build communities that can continue beyond the people leading them today.</p>
@@ -124,6 +124,7 @@ const popcom = [
       <ul>
         <li><a href={`${base}/resources/templates/module-01/OCL%C2%B7WORKSHOP-1-Community-Experience-Canvas.pdf`}>Community Experience Canvas</a></li>
         <li><a href={`${base}/resources/examples/module-01/OCL%20%C2%B7%20WORKSHOP%201%20%C2%B7%20Community-Experience-Canvas-examples.pdf`}>Canvas examples</a></li>
+        <li><a href={`${base}/passport/`}>Leadership Passport</a>{passportIsNew && <span class="tag-new">New</span>}</li>
       </ul>
       <h3>Coming next</h3>
       <ul>

@@ -1,5 +1,5 @@
 ---
-date: 2026-09-18
+date: 2026-10-09
 ---
 
 # Module 02 — Welcome and Onboarding for Volunteers
